@@ -1,0 +1,254 @@
+{
+  "meta": {
+    "title": "Systemic — CRM for Small & Medium Business",
+    "description": "Clients, appointments, sales, inventory, finances & communications — all in one system."
+  },
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "login": "Log in",
+    "tryFree": "Try for free"
+  },
+  "hero": {
+    "title": "CRM for small and medium business",
+    "subtitle": "Clients, appointments, sales, inventory, finances & communications — all in one system. Get started in 5 minutes.",
+    "cta": "Try for free",
+    "ctaSecondary": "Learn more",
+    "trustLine": "Free to start · No credit card required"
+  },
+  "painPoints": {
+    "title": "Sound familiar?",
+    "subtitle": "Systemic solves everyday challenges of small business",
+    "items": [
+      {
+        "title": "Clients get lost",
+        "description": "Contacts scattered across notebooks, messengers and spreadsheets. No single database with interaction history."
+      },
+      {
+        "title": "Finances in chaos",
+        "description": "You don't know your real profit. Cash doesn't add up, salaries calculated manually, expenses get lost."
+      },
+      {
+        "title": "Inventory out of control",
+        "description": "Products run out unexpectedly. No tracking of stock levels, write-offs or purchases."
+      },
+      {
+        "title": "Everything manual, everything slow",
+        "description": "Hours on routine: appointments in notebooks, invoices in Excel, reminders from memory. Business can't scale."
+      }
+    ]
+  },
+  "features": {
+    "title": "Everything your business needs",
+    "subtitle": "From client appointments to financial results — one tool instead of ten",
+    "items": [
+      {
+        "title": "Client Database",
+        "description": "Client cards with visit history, purchases, contacts and categories. Search and filter by any field."
+      },
+      {
+        "title": "Appointment Calendar",
+        "description": "Drag-and-drop calendar with recurring appointments, multiple services and staff filtering."
+      },
+      {
+        "title": "Sales & Orders",
+        "description": "Full order cycle: create, confirm, pack, ship. Nova Poshta integration for delivery."
+      },
+      {
+        "title": "Inventory Management",
+        "description": "Products, stock levels, purchases, stock movements. Automatic write-off on sales."
+      },
+      {
+        "title": "Financial Module",
+        "description": "Transactions, cash register, shifts, financial results. Complete P&L picture in real time."
+      },
+      {
+        "title": "Telegram Bot",
+        "description": "Two-way messaging with clients, automatic appointment reminders — directly in Telegram."
+      },
+      {
+        "title": "Payroll & Motivation",
+        "description": "Flexible motivation schemes: service percentage, fixed rate, bonuses. Automatic calculation."
+      },
+      {
+        "title": "Fiscal Receipts (Checkbox)",
+        "description": "Integration with Checkbox fiscal register. Compliant fiscal receipts per Ukrainian law."
+      }
+    ]
+  },
+  "showcases": [
+    {
+      "badge": "Core",
+      "title": "Clients & appointments — fully under control",
+      "description": "Unified client database with complete history: visits, purchases, messages. Drag-and-drop calendar for quick day planning.",
+      "bullets": [
+        "Client cards with categories and tags",
+        "Drag-and-drop appointment calendar",
+        "Recurring appointments and reminders"
+      ]
+    },
+    {
+      "badge": "Sales",
+      "title": "From order to delivery",
+      "description": "Create orders, track statuses, ship via Nova Poshta. Automatic inventory write-off and waybill creation.",
+      "bullets": [
+        "Full order status workflow",
+        "Nova Poshta integration (waybills)",
+        "Automatic inventory write-off"
+      ]
+    },
+    {
+      "badge": "Analytics",
+      "title": "Finances & analytics in real time",
+      "description": "Know how much you earn every day. Cash register, transactions, financial results, payroll — all automatic.",
+      "bullets": [
+        "Financial results for any period",
+        "Automatic payroll calculation",
+        "Cash register and shift control"
+      ]
+    }
+  ],
+  "howItWorks": {
+    "title": "Get started in 5 minutes",
+    "subtitle": "Three simple steps to automate your business",
+    "steps": [
+      {
+        "title": "Sign up",
+        "description": "Create an account and set up your business: name, locations, services."
+      },
+      {
+        "title": "Add your team",
+        "description": "Invite staff, configure roles and work schedules."
+      },
+      {
+        "title": "Start working!",
+        "description": "Book clients, sell products, track finances. Everything in one place."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Transparent pricing",
+    "subtitle": "No hidden fees. Start for free.",
+    "monthly": "mo",
+    "popular": "Popular",
+    "note": "All prices are indicative. Final pricing will be announced soon.",
+    "tiers": [
+      {
+        "name": "Starter",
+        "price": "Free",
+        "description": "For those just getting started",
+        "features": [
+          "1 location, up to 2 staff members",
+          "Calendar & client database",
+          "Basic financial tracking",
+          "Email support"
+        ],
+        "cta": "Start for free"
+      },
+      {
+        "name": "Business",
+        "price": "499 UAH",
+        "description": "For growing businesses",
+        "features": [
+          "Up to 5 locations, unlimited staff",
+          "Full features: inventory, orders, delivery",
+          "Telegram bot & reminders",
+          "Priority support"
+        ],
+        "cta": "Try 14 days free"
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "description": "For business networks",
+        "features": [
+          "Unlimited locations & staff",
+          "API & custom integrations",
+          "Dedicated account manager",
+          "SLA & uptime guarantees"
+        ],
+        "cta": "Contact us"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What our clients say",
+    "items": [
+      {
+        "name": "Olena K.",
+        "role": "Owner",
+        "company": "Beauty Studio Elegance",
+        "text": "Finally everything in one place. I used to keep appointments in a notebook and finances in Excel. Now I see the full picture in 5 minutes."
+      },
+      {
+        "name": "Andriy M.",
+        "role": "Director",
+        "company": "BarberShop Brothers",
+        "text": "The Telegram bot is pure magic. Clients get reminders and we see their replies right in the CRM."
+      },
+      {
+        "name": "Maria S.",
+        "role": "Manager",
+        "company": "Fitness Hub",
+        "text": "Inventory and sales work flawlessly. We ship orders via Nova Poshta directly from the system."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "Do I need to install any software?",
+        "answer": "No. Systemic works in the browser — on desktop, tablet and phone. Nothing to install."
+      },
+      {
+        "question": "Is there a free plan?",
+        "answer": "Yes, the Starter plan is free forever. You can upgrade to a paid plan when your business needs more features."
+      },
+      {
+        "question": "Can I migrate data from another system?",
+        "answer": "Yes, we'll help migrate your data from Excel or another CRM. Contact our support team."
+      },
+      {
+        "question": "Does it work on mobile?",
+        "answer": "Yes, the responsive interface works on any device with a browser — smartphone, tablet, laptop."
+      },
+      {
+        "question": "Is there a fiscal receipt integration?",
+        "answer": "Yes, integration with Checkbox fiscal register for creating compliant fiscal receipts per Ukrainian law."
+      },
+      {
+        "question": "How many staff members can I add?",
+        "answer": "On the free plan — up to 2. On paid plans — unlimited."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to automate your business?",
+    "subtitle": "Join Systemic — start for free today",
+    "button": "Create account",
+    "contact": "or reach out to us:"
+  },
+  "footer": {
+    "tagline": "CRM for small & medium business",
+    "product": "Product",
+    "productLinks": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "updates": "Updates"
+    },
+    "company": "Company",
+    "companyLinks": {
+      "about": "About",
+      "contact": "Contact",
+      "blog": "Blog"
+    },
+    "legal": "Legal",
+    "legalLinks": {
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy"
+    },
+    "copyright": "© 2026 Systemic. All rights reserved."
+  }
+}
