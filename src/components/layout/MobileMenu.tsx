@@ -21,7 +21,10 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: Props) {
       <div className="fixed inset-0 bg-black/50" onClick={onClose} />
       <div className="fixed right-0 top-0 bottom-0 w-72 bg-white shadow-xl p-6 flex flex-col">
         <div className="flex justify-between items-center mb-8">
-          <span className="text-lg font-bold text-primary">Systemic</span>
+          <div className="flex items-center gap-2">
+            <img src="/images/logo.png" alt="Systemic" className="h-7 w-7 rounded-lg" />
+            <img src="/images/logo-text.png" alt="Systemic" className="h-4 brightness-0" />
+          </div>
           <button onClick={onClose} className="p-2 text-text-secondary">
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />

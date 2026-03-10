@@ -9,7 +9,10 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-1">
-            <h3 className="text-xl font-bold text-white mb-2">Systemic</h3>
+            <div className="flex items-center gap-2 mb-2">
+              <img src="/images/logo.png" alt="Systemic" className="h-8 w-8 rounded-lg" />
+              <img src="/images/logo-text.png" alt="Systemic" className="h-5 brightness-0 invert" />
+            </div>
             <p className="text-sm mb-4">{t('tagline')}</p>
             <a href={`mailto:${CONTACT_EMAIL}`} className="text-sm hover:text-white transition-colors">
               {CONTACT_EMAIL}
