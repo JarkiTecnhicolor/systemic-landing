@@ -24,7 +24,7 @@ export default function HeroSection() {
             <p className="text-lg sm:text-xl text-white/70 mb-10 max-w-2xl leading-relaxed">
               {t('subtitle')}
             </p>
-            <div className="flex flex-col sm:flex-row items-start gap-4 mb-8">
+            <div className="flex flex-wrap gap-4 mb-8">
               <Button href={APP_URL} size="lg">
                 {t('cta')}
               </Button>
