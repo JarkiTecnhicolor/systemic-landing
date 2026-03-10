@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import Badge from '../ui/Badge';
 import AnimateOnScroll from '../ui/AnimateOnScroll';
 
@@ -33,17 +34,16 @@ export default function FeatureShowcase() {
                 </ul>
               </div>
 
-              {/* Screenshot placeholder */}
+              {/* Screenshot */}
               <div className="flex-1 w-full">
                 <div className="rounded-2xl bg-white border border-border p-4 shadow-lg">
-                  <div className="rounded-xl bg-gradient-to-br from-primary-light to-bg-alt aspect-[16/10] flex items-center justify-center">
-                    <div className="text-center text-text-secondary/40">
-                      <svg className="mx-auto h-12 w-12 mb-2" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
-                      </svg>
-                      <p className="text-xs">Screenshot</p>
-                    </div>
-                  </div>
+                  <Image
+                    src={`/images/showcase-${i}.jpg`}
+                    alt={t(`showcases.${i}.title`)}
+                    width={1920}
+                    height={1080}
+                    className="rounded-xl"
+                  />
                 </div>
               </div>
             </div>

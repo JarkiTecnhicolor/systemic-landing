@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import Button from '../ui/Button';
 import { APP_URL } from '../../lib/constants';
 
@@ -32,17 +33,17 @@ export default function HeroSection() {
           <p className="text-sm text-white/50">{t('trustLine')}</p>
         </div>
 
-        {/* Hero screenshot placeholder */}
+        {/* Hero screenshot */}
         <div className="mt-16 lg:mt-0 lg:absolute lg:right-8 lg:top-1/2 lg:-translate-y-1/2 lg:w-[45%]">
           <div className="rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-4 shadow-2xl">
-            <div className="rounded-xl bg-gradient-to-br from-white/5 to-white/10 aspect-[16/10] flex items-center justify-center">
-              <div className="text-center text-white/40">
-                <svg className="mx-auto h-16 w-16 mb-3" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
-                </svg>
-                <p className="text-sm">Dashboard Screenshot</p>
-              </div>
-            </div>
+            <Image
+              src="/images/hero-dashboard.jpg"
+              alt="Systemic CRM Dashboard"
+              width={1920}
+              height={1080}
+              className="rounded-xl"
+              priority
+            />
           </div>
         </div>
       </div>
