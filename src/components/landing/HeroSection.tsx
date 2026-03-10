@@ -15,7 +15,7 @@ export default function HeroSection() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 pb-16 lg:pt-32 lg:pb-24">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-10 items-center">
           {/* Text */}
           <div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
@@ -36,7 +36,7 @@ export default function HeroSection() {
           </div>
 
           {/* Hero screenshot */}
-          <div className="rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-3 shadow-2xl">
+          <div className="rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-3 shadow-2xl lg:-mr-16 xl:-mr-24">
             <Image
               src="/images/hero-dashboard.jpg"
               alt="Systemic CRM Dashboard"
