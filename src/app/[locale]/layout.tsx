@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const isUk = locale === 'uk';
   return {
-    title: isUk ? 'Systemic — CRM для малого та середнього бізнесу' : 'Systemic — CRM for Small & Medium Business',
+    title: isUk ? 'Systemic CRM — система управління бізнесом' : 'Systemic CRM — Business Management System',
     description: isUk
       ? 'Клієнти, записи, продажі, склад, фінанси та комунікації — все в одній системі.'
       : 'Clients, appointments, sales, inventory, finances & communications — all in one system.',
