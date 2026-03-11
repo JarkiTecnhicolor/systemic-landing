@@ -5,12 +5,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ['uk', 'en'];
   const pages = ['', '/pricing'];
 
-  return locales.flatMap((locale) =>
-    pages.map((page) => ({
-      url: `${SITE_URL}/${locale}${page}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: page === '' ? 1 : 0.8,
-    }))
-  );
+  return pages.map((page) => ({
+    url: `${SITE_URL}/uk${page}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: page === '' ? 1 : 0.8,
+    alternates: {
+      languages: Object.fromEntries(
+        locales.map((locale) => [locale, `${SITE_URL}/${locale}${page}`])
+      ),
+    },
+  }));
 }

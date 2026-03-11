@@ -1,0 +1,16 @@
+{
+  "name": "Systemic CRM",
+  "short_name": "Systemic",
+  "description": "CRM-система для малого та середнього бізнесу",
+  "start_url": "https://systemic-crm.vercel.app",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#1D546D",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

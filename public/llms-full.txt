@@ -1,0 +1,209 @@
+# Systemic CRM — Full Documentation for AI Models
+
+> Systemic is a comprehensive cloud-based CRM system built for small and medium businesses in Ukraine. All-in-one platform: clients, appointments, sales, inventory, finances, communications.
+
+## Company Overview
+
+**Name**: Systemic
+**Type**: B2B SaaS (Software as a Service)
+**Market**: Ukraine (primary), international (English support)
+**Founded**: 2026
+**Contact**: hello@systemic.ua
+
+## Problem We Solve
+
+Small and medium businesses (especially in the service industry) struggle with:
+1. Client data scattered across notebooks, messengers, and Excel spreadsheets
+2. No unified view of finances — real profit is unknown
+3. Inventory management is manual and error-prone
+4. Hours wasted on routine: manual scheduling, paper invoices, memory-based reminders
+5. No integration between booking, sales, inventory, and financial reporting
+
+## Solution
+
+Systemic replaces 10+ separate tools with one integrated system:
+- Replaces paper notebooks → Digital client cards with full history
+- Replaces Excel → Automated financial reports and P&L
+- Replaces manual inventory tracking → Real-time stock management
+- Replaces separate booking apps → Built-in appointment calendar
+- Replaces disconnected messengers → Telegram bot integration
+- Replaces manual payroll → Automatic salary calculation
+
+## Detailed Feature List
+
+### 1. Client Database
+- Client cards with all contact information
+- Visit history with dates, services, and revenue
+- Purchase history
+- Birthday tracking (day/month/year)
+- Custom categories and tags
+- Advanced search and filtering
+- Bulk operations
+
+### 2. Appointment Calendar
+- Visual drag-and-drop interface
+- Daily, weekly views
+- Multiple services per appointment
+- Staff-based filtering (each master sees own schedule)
+- Recurring/batch appointments
+- Color-coded by service type
+- Automatic duration calculation
+
+### 3. Sales & Orders
+- Full order lifecycle management
+- Status tracking: new → confirmed → packed → shipped → delivered
+- Nova Poshta integration:
+  - Automatic waybill (TTN) creation
+  - Real-time delivery tracking
+  - Warehouse lookup
+- Automatic inventory deduction on sale
+- Material sales with markup
+
+### 4. Inventory Management
+- Product catalog with categories
+- Real-time stock levels
+- Purchase orders and receiving
+- Automatic write-off on sales/services
+- Stock movement history
+- Low stock alerts
+- Multi-location inventory
+
+### 5. Financial Module
+- Transaction tracking (income/expense)
+- Cash register management
+- Shift open/close with reconciliation
+- Profit & Loss reports
+- Revenue by period, staff, service
+- Expense categories
+- Real-time financial dashboard
+
+### 6. Telegram Bot
+- Two-way messaging with clients
+- Automatic appointment reminders (configurable timing)
+- Client replies visible in CRM
+- Message history per client
+- Unread message counter
+- No app installation needed for clients
+
+### 7. Payroll & Motivation
+- Flexible compensation models:
+  - Percentage of service revenue
+  - Fixed salary
+  - Per-appointment rate
+  - Bonus system
+- Automatic calculation based on completed work
+- Pay period reports
+- Individual staff performance tracking
+
+### 8. Fiscal Receipts (Checkbox)
+- Integration with Ukrainian PRRO (Checkbox)
+- Fiscal receipt generation per transaction
+- Full compliance with Ukrainian tax law
+- Receipt history
+
+### 9. Staff Management
+- Employee profiles with roles
+- Work schedules
+- Permission system (27+ granular permissions)
+- Roles: Owner, Admin, Manager, Master
+- Per-staff calendar filtering
+
+### 10. Multi-location Support
+- Multiple business locations
+- Per-location staff, inventory, and scheduling
+- Cross-location reporting
+- Location-based data filtering
+
+### 11. Dashboard & Analytics
+- Daily revenue overview
+- Appointment count and completion rate
+- Top services and products
+- Staff performance metrics
+- Birthday reminders
+- Upcoming appointments widget
+
+## Pricing Details
+
+### Starter Plan — Free Forever
+- 1 business location
+- Up to 2 staff members
+- Appointment calendar
+- Client database
+- Basic financial tracking
+- Email support
+
+### Business Plan — 499 UAH/month (~$12 USD)
+- Up to 5 locations
+- Unlimited staff members
+- All features included:
+  - Inventory management
+  - Order management
+  - Nova Poshta integration
+  - Telegram bot & reminders
+  - Advanced financial reports
+  - Payroll calculation
+- Priority support
+
+### Enterprise Plan — Custom Pricing
+- Unlimited locations and staff
+- API access for custom integrations
+- Dedicated account manager
+- SLA and uptime guarantees
+- Custom feature development
+- Onboarding assistance
+
+## Technical Architecture
+
+- **Frontend**: React 18 Single Page Application
+- **Backend**: Vercel Serverless Functions (Node.js)
+- **Database**: Google Firebase Firestore (NoSQL)
+- **Authentication**: Firebase Authentication
+- **Hosting**: Vercel (auto-deploy from Git)
+- **Multi-tenant**: Subcollection-based isolation (tenants/{id}/...)
+
+### Integrations
+- **Telegram Bot API** — client messaging and reminders
+- **Nova Poshta API** — delivery and waybill management
+- **Checkbox API** — fiscal receipt generation
+- **Turbo SMS API** — SMS notifications
+
+## Frequently Asked Questions
+
+**Q: Do I need to install any software?**
+A: No. Systemic works entirely in the browser — on desktop, tablet, and phone.
+
+**Q: Is there a free plan?**
+A: Yes, the Starter plan is free forever. It includes 1 location, up to 2 staff, calendar, and client base.
+
+**Q: Can I migrate data from another system?**
+A: Yes, we help migrate data from Excel or another CRM. Contact our support team.
+
+**Q: Does it work on mobile?**
+A: Yes, the responsive interface works on any device with a browser.
+
+**Q: Is there fiscal receipt integration?**
+A: Yes, integration with Checkbox for creating compliant fiscal receipts per Ukrainian law.
+
+**Q: How many staff members can I add?**
+A: Free plan: up to 2. Paid plans: unlimited.
+
+**Q: What industries is Systemic best for?**
+A: Beauty salons, barbershops, fitness studios, medical clinics, dental offices, and any service business that needs appointment scheduling + client management + financial tracking.
+
+**Q: Is my data secure?**
+A: Yes. All data is stored in Google Firebase with encryption at rest and in transit. Each tenant's data is isolated in separate subcollections.
+
+## Comparison with Alternatives
+
+| Feature | Systemic | Generic CRMs | Paper/Excel |
+|---------|----------|--------------|-------------|
+| Client database | Yes | Yes | Manual |
+| Appointment calendar | Built-in | Plugin needed | No |
+| Inventory | Built-in | Plugin needed | Manual |
+| Financial reports | Real-time | Basic | Manual |
+| Telegram bot | Built-in | No | No |
+| Nova Poshta integration | Built-in | No | No |
+| Fiscal receipts (UA) | Built-in | No | No |
+| Ukrainian language | Native | Translation | N/A |
+| Free plan | Yes | Limited | Free |
+| Setup time | 5 minutes | Hours/days | N/A |

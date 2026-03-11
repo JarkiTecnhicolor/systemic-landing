@@ -19,31 +19,31 @@ export default function Footer() {
             </a>
           </div>
 
-          <div>
+          <nav aria-label="Product links">
             <h4 className="text-sm font-semibold text-white mb-4">{t('product')}</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#features" className="hover:text-white transition-colors">{t('productLinks.features')}</a></li>
               <li><a href="#pricing" className="hover:text-white transition-colors">{t('productLinks.pricing')}</a></li>
               <li><a href="#" className="hover:text-white transition-colors">{t('productLinks.updates')}</a></li>
             </ul>
-          </div>
+          </nav>
 
-          <div>
+          <nav aria-label="Company links">
             <h4 className="text-sm font-semibold text-white mb-4">{t('company')}</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="hover:text-white transition-colors">{t('companyLinks.about')}</a></li>
               <li><a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-white transition-colors">{t('companyLinks.contact')}</a></li>
               <li><a href="#" className="hover:text-white transition-colors">{t('companyLinks.blog')}</a></li>
             </ul>
-          </div>
+          </nav>
 
-          <div>
+          <nav aria-label="Legal links">
             <h4 className="text-sm font-semibold text-white mb-4">{t('legal')}</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="hover:text-white transition-colors">{t('legalLinks.terms')}</a></li>
               <li><a href="#" className="hover:text-white transition-colors">{t('legalLinks.privacy')}</a></li>
             </ul>
-          </div>
+          </nav>
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm">

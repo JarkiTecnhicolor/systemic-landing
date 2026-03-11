@@ -11,10 +11,10 @@ export default function FAQSection() {
   }));
 
   return (
-    <section id="faq" className="py-24 bg-bg-alt">
+    <section id="faq" aria-labelledby="faq-heading" className="py-24 bg-bg-alt">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll>
-          <h2 className="text-3xl sm:text-4xl font-bold text-text-primary text-center mb-16">{t('title')}</h2>
+          <h2 id="faq-heading" className="text-3xl sm:text-4xl font-bold text-text-primary text-center mb-16">{t('title')}</h2>
         </AnimateOnScroll>
         <AnimateOnScroll>
           <Accordion items={items} />

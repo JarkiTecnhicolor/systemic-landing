@@ -17,11 +17,11 @@ export default function FeaturesSection() {
   const t = useTranslations('features');
 
   return (
-    <section id="features" className="py-24">
+    <section id="features" aria-labelledby="features-heading" className="py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll>
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">{t('title')}</h2>
+            <h2 id="features-heading" className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">{t('title')}</h2>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto">{t('subtitle')}</p>
           </div>
         </AnimateOnScroll>

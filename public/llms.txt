@@ -1,0 +1,54 @@
+# Systemic CRM
+
+> CRM-система для малого та середнього бізнесу в Україні. Клієнти, записи, продажі, склад, фінанси та комунікації — все в одній системі.
+
+## What is Systemic?
+
+Systemic is a cloud-based CRM (Customer Relationship Management) system designed for small and medium businesses in Ukraine. It runs entirely in the browser — no installation needed. Available in Ukrainian and English.
+
+## Key Features
+
+- **Client Database**: Client cards with visit history, purchases, contacts, categories, tags. Search and filter by any field.
+- **Appointment Calendar**: Drag-and-drop calendar with recurring appointments, multiple services per booking, and staff filtering.
+- **Sales & Orders**: Full order lifecycle — create, confirm, pack, ship. Nova Poshta delivery integration with automatic waybill (TTN) creation.
+- **Inventory Management**: Products, stock levels, purchases, stock movements. Automatic write-off on sales.
+- **Financial Module**: Transactions, cash register, shifts, P&L reports. Real-time financial overview.
+- **Telegram Bot**: Two-way messaging with clients, automatic appointment reminders directly in Telegram.
+- **Payroll & Motivation**: Flexible compensation schemes — service percentage, fixed rate, bonuses. Automatic calculation.
+- **Fiscal Receipts**: Integration with Checkbox (Ukrainian fiscal register) for compliant fiscal receipts.
+- **Multi-location**: Support for multiple business locations with separate staff, schedules, and inventory.
+- **Role-based Access**: Granular permissions — owner, admin, manager, master roles with 27+ permission keys.
+
+## Target Audience
+
+- Beauty salons, barbershops, nail studios
+- Fitness studios, yoga centers
+- Medical clinics, dental offices
+- Service businesses with appointments
+- Small retail with inventory needs
+- Any SMB needing client management + scheduling + finances
+
+## Pricing
+
+- **Starter (Free)**: 1 location, up to 2 staff, calendar, client base, basic finances
+- **Business (499 UAH/mo)**: Up to 5 locations, unlimited staff, full features, Telegram bot, priority support
+- **Enterprise (Custom)**: Unlimited locations, API access, custom integrations, dedicated manager, SLA
+
+## Tech Stack
+
+- Frontend: React 18 SPA
+- Backend: Vercel Serverless Functions
+- Database: Firebase Firestore
+- Auth: Firebase Authentication
+- Integrations: Telegram Bot API, Nova Poshta API, Checkbox API, Turbo SMS
+
+## Links
+
+- Website: https://systemic-landing.vercel.app
+- App: https://systemic-crm.vercel.app
+- Contact: hello@systemic.ua
+
+## Languages
+
+- Ukrainian (primary)
+- English
