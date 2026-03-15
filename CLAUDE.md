@@ -2,12 +2,12 @@
 
 ## Stack
 - Next.js 16, React 19, TypeScript, Tailwind CSS 4
-- i18n: next-intl (uk default + en)
+- i18n: next-intl (uk default + en, es, fr, it, pl)
 - Deploy: Vercel (systemic-landing.vercel.app)
 - Repo: github.com/JarkiTecnhicolor/systemic-landing
 
 ## Structure
-- `messages/uk.json`, `messages/en.json` — all content
+- `messages/{uk,en,es,fr,it,pl}.json` — all content (6 languages)
 - `src/components/landing/` — 9 section components
 - `src/components/layout/` — Header, Footer, LocaleSwitcher, MobileMenu
 - `src/components/ui/` — Button, Badge, Accordion, FeatureCard, AnimateOnScroll
@@ -22,4 +22,4 @@
 ## Rules
 - Static site — no API calls, no database
 - All text content lives in messages/*.json, not hardcoded
-- Both languages must stay in sync
+- All 6 languages must stay in sync
