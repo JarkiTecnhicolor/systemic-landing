@@ -1,0 +1,256 @@
+{
+  "meta": {
+    "title": "Systemic — CRM pour petites et moyennes entreprises",
+    "description": "Clients, rendez-vous, ventes, inventaire, finances et communications — tout dans un seul système."
+  },
+  "nav": {
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "login": "Se connecter",
+    "tryFree": "Essayer gratuitement"
+  },
+  "hero": {
+    "title": "CRM pour petites et moyennes entreprises",
+    "subtitle": "Clients, rendez-vous, ventes, inventaire, finances et communications — tout dans un seul système. Démarrez en 5 minutes.",
+    "cta": "Essayer gratuitement",
+    "ctaSecondary": "En savoir plus",
+    "trustLine": "Démarrage gratuit · Pas de carte bancaire requise"
+  },
+  "painPoints": {
+    "title": "Ça vous parle ?",
+    "subtitle": "Systemic résout les défis quotidiens des petites entreprises",
+    "items": [
+      {
+        "title": "Les clients se perdent",
+        "description": "Contacts dispersés entre carnets, messageries et tableurs. Pas de base de données unique avec historique des interactions."
+      },
+      {
+        "title": "Finances en chaos",
+        "description": "Vous ne connaissez pas votre bénéfice réel. La caisse ne correspond pas, les salaires sont calculés manuellement, les dépenses se perdent."
+      },
+      {
+        "title": "Stock hors de contrôle",
+        "description": "Les produits s'épuisent de manière inattendue. Pas de suivi des niveaux de stock, des pertes ou des achats."
+      },
+      {
+        "title": "Tout manuel, tout lent",
+        "description": "Des heures de routine : rendez-vous dans des carnets, factures dans Excel, rappels de mémoire. L'entreprise ne peut pas se développer."
+      }
+    ]
+  },
+  "features": {
+    "title": "Tout ce dont votre entreprise a besoin",
+    "subtitle": "De la prise de rendez-vous au résultat financier — un outil au lieu de dix",
+    "items": [
+      {
+        "title": "Base de clients",
+        "description": "Fiches clients avec historique des visites, achats, contacts et catégories. Recherche et filtres par n'importe quel champ."
+      },
+      {
+        "title": "Calendrier de rendez-vous",
+        "description": "Calendrier glisser-déposer avec rendez-vous récurrents, services multiples et filtre par professionnel."
+      },
+      {
+        "title": "Ventes et commandes",
+        "description": "Cycle complet des commandes : création, confirmation, emballage, expédition. Intégration Nova Poshta."
+      },
+      {
+        "title": "Gestion des stocks",
+        "description": "Produits, niveaux de stock, achats, mouvements de stock. Déduction automatique lors des ventes."
+      },
+      {
+        "title": "Module financier",
+        "description": "Transactions, caisse, postes, résultats financiers. Vision complète des revenus et dépenses en temps réel."
+      },
+      {
+        "title": "Bot Telegram",
+        "description": "Messagerie bidirectionnelle avec les clients, rappels automatiques de rendez-vous — directement dans Telegram."
+      },
+      {
+        "title": "Salaires et motivation",
+        "description": "Schémas de motivation flexibles : pourcentage des services, taux fixe, primes. Calcul automatique."
+      },
+      {
+        "title": "Reçus fiscaux (Checkbox)",
+        "description": "Intégration avec le registre fiscal Checkbox. Reçus fiscaux conformes à la législation ukrainienne."
+      }
+    ]
+  },
+  "showcases": [
+    {
+      "badge": "Cœur",
+      "title": "Clients et rendez-vous — tout sous contrôle",
+      "description": "Base de données client unifiée avec historique complet : visites, achats, messages. Calendrier glisser-déposer pour planifier rapidement la journée.",
+      "bullets": [
+        "Fiches clients avec catégories et tags",
+        "Calendrier glisser-déposer",
+        "Rendez-vous récurrents et rappels"
+      ]
+    },
+    {
+      "badge": "Ventes",
+      "title": "De la commande à la livraison",
+      "description": "Créez des commandes, suivez les statuts, expédiez via Nova Poshta. Déduction automatique des stocks et création de bordereaux.",
+      "bullets": [
+        "Flux complet des statuts de commande",
+        "Intégration Nova Poshta (bordereaux)",
+        "Déduction automatique des stocks"
+      ]
+    },
+    {
+      "badge": "Analytique",
+      "title": "Finances et analytique en temps réel",
+      "description": "Sachez combien vous gagnez chaque jour. Caisse, transactions, résultats financiers, salaires — tout automatique.",
+      "bullets": [
+        "Résultats financiers pour toute période",
+        "Calcul automatique des salaires",
+        "Contrôle de caisse et des postes"
+      ]
+    }
+  ],
+  "howItWorks": {
+    "title": "Démarrez en 5 minutes",
+    "subtitle": "Trois étapes simples pour automatiser votre entreprise",
+    "steps": [
+      {
+        "title": "Inscrivez-vous",
+        "description": "Créez un compte et configurez votre entreprise : nom, emplacements, services."
+      },
+      {
+        "title": "Ajoutez votre équipe",
+        "description": "Invitez le personnel, configurez les rôles et les horaires de travail."
+      },
+      {
+        "title": "C'est parti !",
+        "description": "Enregistrez des clients, vendez des produits, suivez les finances. Tout en un seul endroit."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Tarifs transparents",
+    "subtitle": "Sans frais cachés. Tous les modules inclus.",
+    "monthly": "mois",
+    "popular": "Populaire",
+    "trial": "7 jours gratuits",
+    "allModules": "Les 46 modules sur chaque forfait",
+    "yearlyDiscount": "Abonnement annuel : –20%",
+    "tiers": [
+      {
+        "name": "Start",
+        "price": "199 UAH",
+        "description": "Pour les professionnels indépendants et micro-salons",
+        "features": [
+          "Jusqu'à 2 utilisateurs",
+          "1 emplacement",
+          "Tous les modules inclus",
+          "7 jours d'essai gratuit"
+        ],
+        "cta": "Essayer gratuitement"
+      },
+      {
+        "name": "Business",
+        "price": "499 UAH",
+        "description": "Pour les entreprises en croissance",
+        "features": [
+          "Jusqu'à 5 utilisateurs",
+          "2 emplacements",
+          "Tous les modules inclus",
+          "7 jours d'essai gratuit"
+        ],
+        "cta": "Essayer gratuitement"
+      },
+      {
+        "name": "Pro",
+        "price": "999 UAH",
+        "description": "Pour les réseaux d'établissements",
+        "features": [
+          "Jusqu'à 15 utilisateurs",
+          "7 emplacements",
+          "Tous les modules inclus",
+          "Support prioritaire"
+        ],
+        "cta": "Essayer gratuitement"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "items": [
+      {
+        "name": "Olena K.",
+        "role": "Propriétaire",
+        "company": "Beauty Studio Elegance",
+        "text": "Enfin tout au même endroit. Avant, je notais les rendez-vous dans un carnet et les finances dans Excel. Maintenant je vois le tableau complet en 5 minutes."
+      },
+      {
+        "name": "Andriy M.",
+        "role": "Directeur",
+        "company": "BarberShop Brothers",
+        "text": "Le bot Telegram, c'est de la magie. Les clients reçoivent des rappels et nous voyons leurs réponses directement dans le CRM."
+      },
+      {
+        "name": "Maria S.",
+        "role": "Responsable",
+        "company": "Fitness Hub",
+        "text": "Le stock et les ventes fonctionnent parfaitement. Nous expédions les commandes via Nova Poshta directement depuis le système."
+      }
+    ]
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "question": "Dois-je installer un logiciel ?",
+        "answer": "Non. Systemic fonctionne dans le navigateur — sur ordinateur, tablette et téléphone. Rien à installer."
+      },
+      {
+        "question": "Y a-t-il un forfait gratuit ?",
+        "answer": "Oui, le forfait Starter est gratuit pour toujours. Vous pouvez passer à un forfait payant quand votre entreprise aura besoin de plus de fonctionnalités."
+      },
+      {
+        "question": "Puis-je migrer mes données depuis un autre système ?",
+        "answer": "Oui, nous vous aiderons à migrer vos données depuis Excel ou un autre CRM. Contactez notre équipe de support."
+      },
+      {
+        "question": "Ça fonctionne sur mobile ?",
+        "answer": "Oui, l'interface adaptative fonctionne sur n'importe quel appareil avec un navigateur — smartphone, tablette, ordinateur portable."
+      },
+      {
+        "question": "Y a-t-il une intégration avec une caisse enregistreuse fiscale ?",
+        "answer": "Oui, intégration avec le registre fiscal Checkbox pour créer des reçus fiscaux conformes à la législation ukrainienne."
+      },
+      {
+        "question": "Combien d'employés puis-je ajouter ?",
+        "answer": "Sur le forfait gratuit — jusqu'à 2. Sur les forfaits payants — illimité."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à automatiser votre entreprise ?",
+    "subtitle": "Rejoignez Systemic — commencez gratuitement dès aujourd'hui",
+    "button": "Créer un compte",
+    "contact": "ou contactez-nous :"
+  },
+  "footer": {
+    "tagline": "CRM pour petites et moyennes entreprises",
+    "product": "Produit",
+    "productLinks": {
+      "features": "Fonctionnalités",
+      "pricing": "Tarifs",
+      "updates": "Mises à jour"
+    },
+    "company": "Entreprise",
+    "companyLinks": {
+      "about": "À propos",
+      "contact": "Contact",
+      "blog": "Blog"
+    },
+    "legal": "Juridique",
+    "legalLinks": {
+      "terms": "Conditions d'utilisation",
+      "privacy": "Politique de confidentialité"
+    },
+    "copyright": "© 2026 Systemic. Tous droits réservés."
+  }
+}

@@ -16,30 +16,73 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const isUk = locale === 'uk';
-  const altLocale = isUk ? 'en' : 'uk';
+  const metaByLocale: Record<string, { title: string; description: string; ogDesc: string; twDesc: string; keywords: string[]; ogLocale: string }> = {
+    uk: {
+      title: 'Systemic CRM — система управління бізнесом',
+      description: 'CRM-система для малого та середнього бізнесу. Клієнти, записи, продажі, склад, фінанси та комунікації — все в одній системі.',
+      ogDesc: 'CRM-система для малого та середнього бізнесу — клієнти, записи, продажі, склад, фінанси.',
+      twDesc: 'Клієнти, записи, продажі, склад, фінанси — все в одній CRM-системі.',
+      keywords: ['CRM', 'CRM Україна', 'CRM для салону краси', 'CRM для малого бізнесу', 'управління записами', 'облік клієнтів', 'Telegram CRM', 'Systemic', 'CRM система', 'автоматизація бізнесу', 'онлайн запис', 'управління складом', 'фіскалізація Checkbox'],
+      ogLocale: 'uk_UA',
+    },
+    en: {
+      title: 'Systemic CRM — Business Management System',
+      description: 'CRM for small and medium business. Clients, appointments, sales, inventory, finances & communications — all in one system.',
+      ogDesc: 'CRM for Small & Medium Business — clients, appointments, sales, inventory, finances.',
+      twDesc: 'Clients, appointments, sales, inventory, finances — all in one CRM.',
+      keywords: ['CRM', 'CRM Ukraine', 'beauty salon CRM', 'small business CRM', 'appointment management', 'client management', 'Telegram CRM', 'Systemic', 'CRM system', 'business automation', 'online booking', 'inventory management'],
+      ogLocale: 'en_US',
+    },
+    es: {
+      title: 'Systemic CRM — Sistema de gestión empresarial',
+      description: 'CRM para pequeñas y medianas empresas. Clientes, citas, ventas, inventario, finanzas y comunicaciones — todo en un sistema.',
+      ogDesc: 'CRM para pequeñas y medianas empresas — clientes, citas, ventas, inventario, finanzas.',
+      twDesc: 'Clientes, citas, ventas, inventario, finanzas — todo en un CRM.',
+      keywords: ['CRM', 'CRM para negocios', 'CRM salón de belleza', 'gestión de citas', 'gestión de clientes', 'Telegram CRM', 'Systemic', 'automatización empresarial'],
+      ogLocale: 'es_ES',
+    },
+    fr: {
+      title: 'Systemic CRM — Système de gestion d\'entreprise',
+      description: 'CRM pour petites et moyennes entreprises. Clients, rendez-vous, ventes, inventaire, finances et communications — tout en un.',
+      ogDesc: 'CRM pour PME — clients, rendez-vous, ventes, inventaire, finances.',
+      twDesc: 'Clients, rendez-vous, ventes, inventaire, finances — tout dans un CRM.',
+      keywords: ['CRM', 'CRM entreprise', 'CRM salon de beauté', 'gestion de rendez-vous', 'gestion de clients', 'Telegram CRM', 'Systemic', 'automatisation entreprise'],
+      ogLocale: 'fr_FR',
+    },
+    it: {
+      title: 'Systemic CRM — Sistema di gestione aziendale',
+      description: 'CRM per piccole e medie imprese. Clienti, appuntamenti, vendite, magazzino, finanze e comunicazioni — tutto in un sistema.',
+      ogDesc: 'CRM per PMI — clienti, appuntamenti, vendite, magazzino, finanze.',
+      twDesc: 'Clienti, appuntamenti, vendite, magazzino, finanze — tutto in un CRM.',
+      keywords: ['CRM', 'CRM aziendale', 'CRM salone di bellezza', 'gestione appuntamenti', 'gestione clienti', 'Telegram CRM', 'Systemic', 'automazione aziendale'],
+      ogLocale: 'it_IT',
+    },
+    pl: {
+      title: 'Systemic CRM — System zarządzania firmą',
+      description: 'CRM dla małych i średnich firm. Klienci, wizyty, sprzedaż, magazyn, finanse i komunikacja — wszystko w jednym systemie.',
+      ogDesc: 'CRM dla MŚP — klienci, wizyty, sprzedaż, magazyn, finanse.',
+      twDesc: 'Klienci, wizyty, sprzedaż, magazyn, finanse — wszystko w jednym CRM.',
+      keywords: ['CRM', 'CRM dla firm', 'CRM salon kosmetyczny', 'zarządzanie wizytami', 'zarządzanie klientami', 'Telegram CRM', 'Systemic', 'automatyzacja biznesu'],
+      ogLocale: 'pl_PL',
+    },
+  };
+
+  const meta = metaByLocale[locale] ?? metaByLocale.en;
+  const alternateLanguages: Record<string, string> = { 'x-default': '/uk' };
+  routing.locales.forEach(l => { alternateLanguages[l] = `/${l}`; });
 
   return {
-    title: isUk ? 'Systemic CRM — система управління бізнесом' : 'Systemic CRM — Business Management System',
-    description: isUk
-      ? 'CRM-система для малого та середнього бізнесу. Клієнти, записи, продажі, склад, фінанси та комунікації — все в одній системі.'
-      : 'CRM for small and medium business. Clients, appointments, sales, inventory, finances & communications — all in one system.',
+    title: meta.title,
+    description: meta.description,
     metadataBase: new URL(SITE_URL),
     alternates: {
       canonical: `/${locale}`,
-      languages: {
-        [locale]: `/${locale}`,
-        [altLocale]: `/${altLocale}`,
-        'x-default': '/uk',
-      },
+      languages: alternateLanguages,
     },
     openGraph: {
-      title: isUk ? 'Systemic CRM — система управління бізнесом' : 'Systemic CRM — Business Management System',
-      description: isUk
-        ? 'CRM-система для малого та середнього бізнесу — клієнти, записи, продажі, склад, фінанси.'
-        : 'CRM for Small & Medium Business — clients, appointments, sales, inventory, finances.',
-      locale: isUk ? 'uk_UA' : 'en_US',
-      alternateLocale: isUk ? 'en_US' : 'uk_UA',
+      title: meta.title,
+      description: meta.ogDesc,
+      locale: meta.ogLocale,
       type: 'website',
       siteName: 'Systemic CRM',
       url: `${SITE_URL}/${locale}`,
@@ -54,15 +97,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     twitter: {
       card: 'summary_large_image',
-      title: isUk ? 'Systemic CRM — система управління бізнесом' : 'Systemic CRM — Business Management System',
-      description: isUk
-        ? 'Клієнти, записи, продажі, склад, фінанси — все в одній CRM-системі.'
-        : 'Clients, appointments, sales, inventory, finances — all in one CRM.',
+      title: meta.title,
+      description: meta.twDesc,
       images: ['/images/hero-dashboard.jpg'],
     },
-    keywords: isUk
-      ? ['CRM', 'CRM Україна', 'CRM для салону краси', 'CRM для малого бізнесу', 'управління записами', 'облік клієнтів', 'Telegram CRM', 'Systemic', 'CRM система', 'автоматизація бізнесу', 'онлайн запис', 'управління складом', 'фіскалізація Checkbox']
-      : ['CRM', 'CRM Ukraine', 'beauty salon CRM', 'small business CRM', 'appointment management', 'client management', 'Telegram CRM', 'Systemic', 'CRM system', 'business automation', 'online booking', 'inventory management'],
+    keywords: meta.keywords,
     robots: {
       index: true,
       follow: true,
@@ -82,7 +121,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
-  if (!routing.locales.includes(locale as 'uk' | 'en')) notFound();
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) notFound();
   setRequestLocale(locale);
   const messages = await getMessages();
 

@@ -1,10 +1,5 @@
 import { SITE_URL, APP_URL, CONTACT_EMAIL } from '../../lib/constants';
 
-type JsonLdProps = {
-  locale: string;
-  faqItems?: { question: string; answer: string }[];
-};
-
 export function OrganizationJsonLd() {
   const data = {
     '@context': 'https://schema.org',
@@ -18,7 +13,7 @@ export function OrganizationJsonLd() {
       '@type': 'ContactPoint',
       email: CONTACT_EMAIL,
       contactType: 'sales',
-      availableLanguage: ['Ukrainian', 'English'],
+      availableLanguage: ['Ukrainian', 'English', 'Spanish', 'French', 'Italian', 'Polish'],
     },
   };
 
@@ -53,7 +48,7 @@ export function SoftwareApplicationJsonLd({ locale }: { locale: string }) {
     featureList: isUk
       ? 'Клієнтська база, Календар записів, Продажі, Склад, Фінанси, Telegram-бот, Зарплати, Фіскалізація'
       : 'Client Database, Appointment Calendar, Sales, Inventory, Finances, Telegram Bot, Payroll, Fiscal Receipts',
-    inLanguage: [isUk ? 'uk' : 'en'],
+    inLanguage: [locale],
     author: {
       '@type': 'Organization',
       name: 'Systemic',
@@ -74,7 +69,7 @@ export function WebSiteJsonLd() {
     '@type': 'WebSite',
     name: 'Systemic',
     url: SITE_URL,
-    inLanguage: ['uk', 'en'],
+    inLanguage: ['uk', 'en', 'es', 'fr', 'it', 'pl'],
     publisher: {
       '@type': 'Organization',
       name: 'Systemic',
