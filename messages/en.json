@@ -129,46 +129,48 @@
   },
   "pricing": {
     "title": "Transparent pricing",
-    "subtitle": "No hidden fees. Start for free.",
+    "subtitle": "No hidden fees. All modules included.",
     "monthly": "mo",
     "popular": "Popular",
-    "note": "All prices are indicative. Final pricing will be announced soon.",
+    "trial": "7 days free trial",
+    "allModules": "All 46 modules on every plan",
+    "yearlyDiscount": "Annual subscription: –20%",
     "tiers": [
       {
-        "name": "Starter",
-        "price": "Free",
-        "description": "For those just getting started",
+        "name": "Start",
+        "price": "199 UAH",
+        "description": "For solo professionals & micro-salons",
         "features": [
-          "1 location, up to 2 staff members",
-          "Calendar & client database",
-          "Basic financial tracking",
-          "Email support"
+          "Up to 2 users",
+          "1 location",
+          "All modules included",
+          "7-day free trial"
         ],
-        "cta": "Start for free"
+        "cta": "Try for free"
       },
       {
         "name": "Business",
         "price": "499 UAH",
         "description": "For growing businesses",
         "features": [
-          "Up to 5 locations, unlimited staff",
-          "Full features: inventory, orders, delivery",
-          "Telegram bot & reminders",
-          "Priority support"
+          "Up to 5 users",
+          "2 locations",
+          "All modules included",
+          "7-day free trial"
         ],
-        "cta": "Try 14 days free"
+        "cta": "Try for free"
       },
       {
-        "name": "Enterprise",
-        "price": "Custom",
+        "name": "Pro",
+        "price": "999 UAH",
         "description": "For business networks",
         "features": [
-          "Unlimited locations & staff",
-          "API & custom integrations",
-          "Dedicated account manager",
-          "SLA & uptime guarantees"
+          "Up to 15 users",
+          "7 locations",
+          "All modules included",
+          "Priority support"
         ],
-        "cta": "Contact us"
+        "cta": "Try for free"
       }
     ]
   },

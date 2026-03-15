@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: locale === 'uk' ? 'Тарифи — Systemic CRM' : 'Pricing — Systemic CRM',
     description: locale === 'uk'
-      ? 'Прозорі тарифи Systemic CRM. Безкоштовний старт, плани для зростаючого бізнесу та ентерпрайз.'
-      : 'Transparent Systemic CRM pricing. Free starter plan, business plans, and enterprise solutions.',
+      ? 'Прозорі тарифи Systemic CRM. Start від 199 грн/міс, Business 499 грн, Pro 999 грн. Всі модулі включено.'
+      : 'Transparent Systemic CRM pricing. Start from 199 UAH/mo, Business 499, Pro 999. All modules included.',
   };
 }
 
