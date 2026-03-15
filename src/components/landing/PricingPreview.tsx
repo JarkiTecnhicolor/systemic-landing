@@ -19,13 +19,13 @@ export default function PricingPreview() {
           </div>
         </AnimateOnScroll>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="group/pricing grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {tiers.map((i) => (
             <AnimateOnScroll key={i}>
-              <div className={`relative rounded-2xl p-8 flex flex-col h-full transition-all duration-300 ${
+              <div className={`group/card relative rounded-2xl p-8 flex flex-col h-full transition-all duration-300 ${
                 i === popular
-                  ? 'bg-primary-dark text-white border-2 border-accent shadow-2xl scale-105 hover:scale-[1.08] hover:shadow-3xl'
-                  : 'bg-white border border-border hover:scale-105 hover:shadow-xl hover:border-accent/40'
+                  ? 'bg-primary-dark text-white border-2 border-accent shadow-2xl scale-105 group-hover/pricing:[&:not(:hover)]:scale-100 group-hover/pricing:[&:not(:hover)]:opacity-60 group-hover/pricing:[&:not(:hover)]:shadow-none hover:scale-[1.08] hover:shadow-3xl'
+                  : 'bg-white border border-border group-hover/pricing:[&:not(:hover)]:opacity-60 hover:bg-primary-dark hover:text-white hover:border-accent hover:scale-105 hover:shadow-2xl'
               }`}>
                 {i === popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-semibold px-4 py-1 rounded-full">
@@ -33,16 +33,16 @@ export default function PricingPreview() {
                   </div>
                 )}
 
-                <h3 className={`text-xl font-bold mb-2 ${i === popular ? 'text-white' : 'text-text-primary'}`}>
+                <h3 className={`text-xl font-bold mb-2 transition-colors duration-300 ${i === popular ? 'text-white' : 'text-text-primary group-hover/card:text-white'}`}>
                   {t(`tiers.${i}.name`)}
                 </h3>
                 <div className="mb-1">
-                  <span className={`text-3xl font-bold ${i === popular ? 'text-white' : 'text-text-primary'}`}>
+                  <span className={`text-3xl font-bold transition-colors duration-300 ${i === popular ? 'text-white' : 'text-text-primary group-hover/card:text-white'}`}>
                     {t(`tiers.${i}.price`)}
                   </span>
-                  <span className={`text-sm ml-1 ${i === popular ? 'text-white/60' : 'text-text-secondary'}`}>/ {t('monthly')}</span>
+                  <span className={`text-sm ml-1 transition-colors duration-300 ${i === popular ? 'text-white/60' : 'text-text-secondary group-hover/card:text-white/60'}`}>/ {t('monthly')}</span>
                 </div>
-                <p className={`text-sm mb-6 ${i === popular ? 'text-white/70' : 'text-text-secondary'}`}>
+                <p className={`text-sm mb-6 transition-colors duration-300 ${i === popular ? 'text-white/70' : 'text-text-secondary group-hover/card:text-white/70'}`}>
                   {t(`tiers.${i}.description`)}
                 </p>
 
@@ -52,10 +52,10 @@ export default function PricingPreview() {
                     try { text = t(`tiers.${i}.features.${j}`); } catch { return null; }
                     return (
                       <li key={j} className="flex items-start gap-2 text-sm">
-                        <svg className={`h-5 w-5 shrink-0 ${i === popular ? 'text-accent' : 'text-accent'}`} fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                        <svg className="h-5 w-5 shrink-0 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                         </svg>
-                        <span className={i === popular ? 'text-white/90' : ''}>{text}</span>
+                        <span className={`transition-colors duration-300 ${i === popular ? 'text-white/90' : 'group-hover/card:text-white/90'}`}>{text}</span>
                       </li>
                     );
                   })}
