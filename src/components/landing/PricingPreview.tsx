@@ -22,10 +22,10 @@ export default function PricingPreview() {
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {tiers.map((i) => (
             <AnimateOnScroll key={i}>
-              <div className={`relative rounded-2xl p-8 flex flex-col h-full ${
+              <div className={`relative rounded-2xl p-8 flex flex-col h-full transition-all duration-300 ${
                 i === popular
-                  ? 'bg-primary-dark text-white border-2 border-accent shadow-2xl scale-105'
-                  : 'bg-white border border-border'
+                  ? 'bg-primary-dark text-white border-2 border-accent shadow-2xl scale-105 hover:scale-[1.08] hover:shadow-3xl'
+                  : 'bg-white border border-border hover:scale-105 hover:shadow-xl hover:border-accent/40'
               }`}>
                 {i === popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-semibold px-4 py-1 rounded-full">
