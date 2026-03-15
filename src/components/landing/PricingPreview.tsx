@@ -50,14 +50,14 @@ export default function PricingPreview({ region = 'ua' }: { region?: string }) {
 
                 <ul className="space-y-3 mb-8 flex-1">
                   {[0, 1, 2, 3].map((j) => {
-                    let text: string;
-                    try { text = t(`tiers.${i}.features.${j}`); } catch { return null; }
+                    const key = `tiers.${i}.features.${j}`;
+                    if (!t.has(key)) return null;
                     return (
                       <li key={j} className="flex items-start gap-2 text-sm">
                         <svg className="h-5 w-5 shrink-0 text-accent" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                         </svg>
-                        <span className="transition-colors duration-300 group-hover/card:text-white/90">{text}</span>
+                        <span className="transition-colors duration-300 group-hover/card:text-white/90">{t(key)}</span>
                       </li>
                     );
                   })}
