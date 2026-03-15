@@ -66,7 +66,7 @@ export default function PricingPreview({ region = 'ua' }: { region?: string }) {
                 <Button
                   href={REGISTER_URL}
                   variant="secondary"
-                  className="w-full"
+                  className="w-full group-hover/card:bg-accent group-hover/card:text-white group-hover/card:shadow-lg group-hover/card:shadow-accent/25 hover:!bg-accent-hover"
                 >
                   {t(`tiers.${i}.cta`)}
                 </Button>
