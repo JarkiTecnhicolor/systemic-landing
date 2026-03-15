@@ -1,3 +1,4 @@
+import { cookies } from 'next/headers';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
@@ -21,6 +22,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const cookieStore = await cookies();
+  const region = cookieStore.get('region')?.value || 'ua';
+
   const t = await getTranslations({ locale, namespace: 'faq' });
   const faqItems = [0, 1, 2, 3, 4, 5].map((i) => ({
     question: t(`items.${i}.question`),
@@ -40,7 +44,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <FeaturesSection />
         <FeatureShowcase />
         <HowItWorksSection />
-        <PricingPreview />
+        <PricingPreview region={region} />
         <TestimonialsSection />
         <FAQSection />
         <CTASection />

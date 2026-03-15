@@ -1,5 +1,5 @@
 import createMiddleware from 'next-intl/middleware';
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { routing } from './i18n/routing';
 
 // Map country codes to our supported locales
@@ -17,33 +17,49 @@ const COUNTRY_TO_LOCALE: Record<string, string> = {
   BE: 'fr', CH: 'fr', LU: 'fr',
 };
 
+// UA pricing region — everything else gets EU pricing
+const UA_COUNTRIES = new Set(['UA']);
+
 const intlMiddleware = createMiddleware(routing);
 
 export default function middleware(req: NextRequest) {
-  // Only apply geo-detection when visiting root without an existing locale cookie
   const hasLocaleCookie = req.cookies.has('NEXT_LOCALE');
   const pathname = req.nextUrl.pathname;
   const isRoot = pathname === '/';
+  const country = req.headers.get('x-vercel-ip-country') || '';
+
+  let response: NextResponse;
 
   if (isRoot && !hasLocaleCookie) {
-    const country = req.headers.get('x-vercel-ip-country') || '';
     const geoLocale = COUNTRY_TO_LOCALE[country];
 
     if (geoLocale && geoLocale !== routing.defaultLocale) {
-      // Rewrite the Accept-Language header so next-intl picks up our geo locale
       const headers = new Headers(req.headers);
       headers.set('Accept-Language', `${geoLocale};q=1.0`);
       const modifiedReq = new NextRequest(req.url, {
         headers,
         method: req.method,
       });
-      // Copy cookies from original request
       req.cookies.getAll().forEach(c => modifiedReq.cookies.set(c.name, c.value));
-      return intlMiddleware(modifiedReq);
+      response = intlMiddleware(modifiedReq) as NextResponse;
+    } else {
+      response = intlMiddleware(req) as NextResponse;
     }
+  } else {
+    response = intlMiddleware(req) as NextResponse;
   }
 
-  return intlMiddleware(req);
+  // Set pricing region cookie (ua or eu) based on IP country
+  if (!req.cookies.has('region')) {
+    const region = UA_COUNTRIES.has(country) ? 'ua' : 'eu';
+    response.cookies.set('region', region, {
+      path: '/',
+      maxAge: 60 * 60 * 24 * 30, // 30 days
+      sameSite: 'lax',
+    });
+  }
+
+  return response;
 }
 
 export const config = {

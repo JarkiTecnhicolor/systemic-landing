@@ -3,11 +3,17 @@ import Button from '../ui/Button';
 import AnimateOnScroll from '../ui/AnimateOnScroll';
 import { REGISTER_URL } from '../../lib/constants';
 
-export default function PricingPreview() {
+const PRICES: Record<string, { prices: string[]; currency: string }> = {
+  ua: { prices: ['199 грн', '499 грн', '999 грн'], currency: 'грн' },
+  eu: { prices: ['€5.99', '€14.99', '€28.99'], currency: 'EUR' },
+};
+
+export default function PricingPreview({ region = 'ua' }: { region?: string }) {
   const t = useTranslations('pricing');
 
   const tiers = [0, 1, 2];
   const popular = 1;
+  const { prices } = PRICES[region] || PRICES.ua;
 
   return (
     <section id="pricing" aria-labelledby="pricing-heading" className="py-24 bg-bg-alt">
@@ -34,7 +40,7 @@ export default function PricingPreview() {
                 </h3>
                 <div className="mb-1">
                   <span className="text-3xl font-bold transition-colors duration-300 text-text-primary group-hover/card:text-white">
-                    {t(`tiers.${i}.price`)}
+                    {prices[i]}
                   </span>
                   <span className="text-sm ml-1 transition-colors duration-300 text-text-secondary group-hover/card:text-white/60">/ {t('monthly')}</span>
                 </div>

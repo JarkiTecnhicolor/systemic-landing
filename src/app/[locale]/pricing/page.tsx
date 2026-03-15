@@ -1,3 +1,4 @@
+import { cookies } from 'next/headers';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Header from '../../../components/layout/Header';
 import Footer from '../../../components/layout/Footer';
@@ -10,11 +11,11 @@ import type { Metadata } from 'next';
 
 const pricingMeta: Record<string, { title: string; description: string }> = {
   uk: { title: 'Тарифи — Systemic CRM', description: 'Прозорі тарифи Systemic CRM. Start від 199 грн/міс, Business 499 грн, Pro 999 грн. Всі модулі включено.' },
-  en: { title: 'Pricing — Systemic CRM', description: 'Transparent Systemic CRM pricing. Start from 199 UAH/mo, Business 499, Pro 999. All modules included.' },
-  es: { title: 'Precios — Systemic CRM', description: 'Precios transparentes de Systemic CRM. Start desde 199 UAH/mes, Business 499, Pro 999. Todos los módulos incluidos.' },
-  fr: { title: 'Tarifs — Systemic CRM', description: 'Tarifs transparents Systemic CRM. Start à partir de 199 UAH/mois, Business 499, Pro 999. Tous les modules inclus.' },
-  it: { title: 'Prezzi — Systemic CRM', description: 'Prezzi trasparenti Systemic CRM. Start da 199 UAH/mese, Business 499, Pro 999. Tutti i moduli inclusi.' },
-  pl: { title: 'Cennik — Systemic CRM', description: 'Przejrzyste ceny Systemic CRM. Start od 199 UAH/mies., Business 499, Pro 999. Wszystkie moduły w cenie.' },
+  en: { title: 'Pricing — Systemic CRM', description: 'Transparent Systemic CRM pricing. Start from €5.99/mo, Business €14.99, Pro €28.99. All modules included.' },
+  es: { title: 'Precios — Systemic CRM', description: 'Precios transparentes de Systemic CRM. Start desde €5,99/mes, Business €14,99, Pro €28,99. Todos los módulos incluidos.' },
+  fr: { title: 'Tarifs — Systemic CRM', description: 'Tarifs transparents Systemic CRM. Start à partir de 5,99 €/mois, Business 14,99 €, Pro 28,99 €. Tous les modules inclus.' },
+  it: { title: 'Prezzi — Systemic CRM', description: 'Prezzi trasparenti Systemic CRM. Start da €5,99/mese, Business €14,99, Pro €28,99. Tutti i moduli inclusi.' },
+  pl: { title: 'Cennik — Systemic CRM', description: 'Przejrzyste ceny Systemic CRM. Start od €5,99/mies., Business €14,99, Pro €28,99. Wszystkie moduły w cenie.' },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -26,6 +27,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function PricingPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  const cookieStore = await cookies();
+  const region = cookieStore.get('region')?.value || 'ua';
 
   const t = await getTranslations({ locale, namespace: 'faq' });
   const faqItems = [0, 1, 2, 3, 4, 5].map((i) => ({
@@ -47,7 +51,7 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
       <FAQPageJsonLd items={faqItems} />
       <Header />
       <main className="pt-16">
-        <PricingPreview />
+        <PricingPreview region={region} />
         <FAQSection />
         <CTASection />
       </main>
