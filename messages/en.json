@@ -155,10 +155,9 @@
         "features": [
           "Up to 5 users",
           "2 locations",
-          "All modules included",
-          "7-day free trial"
+          "All modules included"
         ],
-        "cta": "Try for free"
+        "cta": "Choose plan"
       },
       {
         "name": "Pro",
@@ -170,7 +169,7 @@
           "All modules included",
           "Priority support"
         ],
-        "cta": "Try for free"
+        "cta": "Choose plan"
       }
     ]
   },

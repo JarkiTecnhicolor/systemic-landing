@@ -155,10 +155,9 @@
         "features": [
           "Do 5 użytkowników",
           "2 lokalizacje",
-          "Wszystkie moduły w cenie",
-          "7 dni bezpłatnego okresu próbnego"
+          "Wszystkie moduły w cenie"
         ],
-        "cta": "Wypróbuj za darmo"
+        "cta": "Wybierz plan"
       },
       {
         "name": "Pro",
@@ -170,7 +169,7 @@
           "Wszystkie moduły w cenie",
           "Priorytetowe wsparcie"
         ],
-        "cta": "Wypróbuj za darmo"
+        "cta": "Wybierz plan"
       }
     ]
   },

@@ -155,10 +155,9 @@
         "features": [
           "Jusqu'à 5 utilisateurs",
           "2 emplacements",
-          "Tous les modules inclus",
-          "7 jours d'essai gratuit"
+          "Tous les modules inclus"
         ],
-        "cta": "Essayer gratuitement"
+        "cta": "Choisir un plan"
       },
       {
         "name": "Pro",
@@ -170,7 +169,7 @@
           "Tous les modules inclus",
           "Support prioritaire"
         ],
-        "cta": "Essayer gratuitement"
+        "cta": "Choisir un plan"
       }
     ]
   },
