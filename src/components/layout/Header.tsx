@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import Button from '../ui/Button';
 import LocaleSwitcher from './LocaleSwitcher';
 import MobileMenu from './MobileMenu';
-import { APP_URL } from '../../lib/constants';
+import { APP_URL, REGISTER_URL } from '../../lib/constants';
 
 export default function Header() {
   const t = useTranslations('nav');
@@ -58,7 +58,7 @@ export default function Header() {
               >
                 {t('login')}
               </a>
-              <Button href={APP_URL} size="sm">
+              <Button href={REGISTER_URL} size="sm">
                 {t('tryFree')}
               </Button>
             </div>

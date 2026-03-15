@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Button from '../ui/Button';
 import LocaleSwitcher from './LocaleSwitcher';
-import { APP_URL } from '../../lib/constants';
+import { APP_URL, REGISTER_URL } from '../../lib/constants';
 
 type Props = {
   isOpen: boolean;
@@ -43,7 +43,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: Props) {
         <div className="mt-auto flex flex-col gap-3">
           <LocaleSwitcher scrolled />
           <a href={APP_URL} className="text-center text-text-secondary hover:text-primary">{t('login')}</a>
-          <Button href={APP_URL} className="w-full">{t('tryFree')}</Button>
+          <Button href={REGISTER_URL} className="w-full">{t('tryFree')}</Button>
         </div>
       </div>
     </div>

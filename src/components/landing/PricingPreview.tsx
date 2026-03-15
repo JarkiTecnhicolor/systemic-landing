@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Button from '../ui/Button';
 import AnimateOnScroll from '../ui/AnimateOnScroll';
-import { APP_URL } from '../../lib/constants';
+import { REGISTER_URL } from '../../lib/constants';
 
 export default function PricingPreview() {
   const t = useTranslations('pricing');
@@ -62,7 +62,7 @@ export default function PricingPreview() {
                 </ul>
 
                 <Button
-                  href={APP_URL}
+                  href={REGISTER_URL}
                   variant={i === popular ? 'primary' : 'secondary'}
                   className="w-full"
                 >

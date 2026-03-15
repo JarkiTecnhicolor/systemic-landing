@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Button from '../ui/Button';
 import AnimateOnScroll from '../ui/AnimateOnScroll';
-import { APP_URL, CONTACT_EMAIL } from '../../lib/constants';
+import { REGISTER_URL, CONTACT_EMAIL } from '../../lib/constants';
 
 export default function CTASection() {
   const t = useTranslations('cta');
@@ -16,7 +16,7 @@ export default function CTASection() {
         <AnimateOnScroll>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">{t('title')}</h2>
           <p className="text-lg text-white/70 mb-10">{t('subtitle')}</p>
-          <Button href={APP_URL} size="lg">
+          <Button href={REGISTER_URL} size="lg">
             {t('button')}
           </Button>
           <p className="mt-6 text-sm text-white/50">

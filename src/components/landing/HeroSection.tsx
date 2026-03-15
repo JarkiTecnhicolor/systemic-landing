@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Button from '../ui/Button';
-import { APP_URL } from '../../lib/constants';
+import { REGISTER_URL } from '../../lib/constants';
 
 export default function HeroSection() {
   const t = useTranslations('hero');
@@ -25,7 +25,7 @@ export default function HeroSection() {
               {t('subtitle')}
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
-              <Button href={APP_URL} size="lg">
+              <Button href={REGISTER_URL} size="lg">
                 {t('cta')}
               </Button>
               <Button href="#features" variant="outline" size="lg">
