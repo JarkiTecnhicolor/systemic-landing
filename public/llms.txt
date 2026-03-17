@@ -44,9 +44,9 @@ Systemic is a cloud-based CRM (Customer Relationship Management) system designed
 
 ## Links
 
-- Website: https://systemic-landing.vercel.app
-- App: https://systemic-crm.vercel.app
-- Contact: hello@systemic.ua
+- Website: https://systemic-crm.com
+- App: https://app.systemic-crm.com
+- Contact: hello@systemic-crm.com
 
 ## Languages
 
