@@ -8,6 +8,8 @@ const PRICES: Record<string, { prices: string[]; currency: string }> = {
   eu: { prices: ['€5.99', '€14.99', '€28.99'], currency: 'EUR' },
 };
 
+const PLAN_KEYS = ['start', 'business', 'pro'];
+
 export default function PricingPreview({ region = 'ua' }: { region?: string }) {
   const t = useTranslations('pricing');
 
@@ -64,7 +66,7 @@ export default function PricingPreview({ region = 'ua' }: { region?: string }) {
                 </ul>
 
                 <Button
-                  href={REGISTER_URL}
+                  href={`${REGISTER_URL}&plan=${PLAN_KEYS[i]}`}
                   variant="secondary"
                   className="w-full group-hover/card:bg-accent group-hover/card:text-white group-hover/card:shadow-lg group-hover/card:shadow-accent/25 hover:!bg-accent-hover"
                 >
