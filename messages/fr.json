@@ -178,20 +178,17 @@
     "items": [
       {
         "name": "Andriy M.",
-        "role": "Propriétaire",
-        "company": "Clinique de kinésithérapie «Rukh»",
+        "role": "Propriétaire d'un salon de kinésithérapie",
         "text": "Le bot Telegram, c'est de la magie. Les clients reçoivent des rappels et nous voyons leurs réponses directement dans le CRM."
       },
       {
         "name": "Serhiy M.",
-        "role": "Propriétaire",
-        "company": "Chaîne CoffeePoint",
+        "role": "Propriétaire d'une chaîne de cafés",
         "text": "Enfin tout au même endroit. Avant, on notait dans des carnets et les finances dans Excel. Maintenant je vois tout en 5 minutes."
       },
       {
         "name": "Iryna D.",
-        "role": "Directrice",
-        "company": "Beauty Studio Elegance",
+        "role": "Directrice de salon de beauté",
         "text": "Le stock et les ventes fonctionnent parfaitement. Nous expédions les commandes via Nova Poshta directement depuis le système."
       }
     ]

@@ -178,20 +178,17 @@
     "items": [
       {
         "name": "Andriy M.",
-        "role": "Owner",
-        "company": "Kinesiotherapy Clinic «Rukh»",
+        "role": "Kinesiotherapy salon owner",
         "text": "The Telegram bot is pure magic. Clients get reminders, and we see their responses right in the CRM."
       },
       {
         "name": "Serhiy M.",
-        "role": "Owner",
-        "company": "CoffeePoint Chain",
+        "role": "Coffee shop chain owner",
         "text": "Finally everything in one place. We used to keep records in notebooks and finances in Excel. Now I see the full picture in 5 minutes."
       },
       {
         "name": "Iryna D.",
-        "role": "Director",
-        "company": "Beauty Studio Elegance",
+        "role": "Beauty salon director",
         "text": "Inventory and sales work flawlessly. We ship orders via Nova Poshta right from the system."
       }
     ]

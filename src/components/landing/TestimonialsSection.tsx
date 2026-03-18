@@ -21,7 +21,7 @@ export default function TestimonialsSection() {
                   </div>
                   <div>
                     <div className="font-semibold text-text-primary">{t(`items.${i}.name`)}</div>
-                    <div className="text-sm text-text-secondary">{t(`items.${i}.role`)}, {t(`items.${i}.company`)}</div>
+                    <div className="text-sm text-text-secondary">{t(`items.${i}.role`)}</div>
                   </div>
                 </div>
                 <p className="text-text-secondary leading-relaxed italic">&ldquo;{t(`items.${i}.text`)}&rdquo;</p>
