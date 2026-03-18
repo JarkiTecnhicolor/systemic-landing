@@ -1,8 +1,10 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
 import { CONTACT_EMAIL } from '../../lib/constants';
 
 export default function Footer() {
   const t = useTranslations('footer');
+  const locale = useLocale();
 
   return (
     <footer className="bg-primary-dark text-white/70">
@@ -40,8 +42,8 @@ export default function Footer() {
           <nav aria-label="Legal links">
             <h4 className="text-sm font-semibold text-white mb-4">{t('legal')}</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white transition-colors">{t('legalLinks.terms')}</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">{t('legalLinks.privacy')}</a></li>
+              <li><Link href={`/${locale}/terms`} className="hover:text-white transition-colors">{t('legalLinks.terms')}</Link></li>
+              <li><Link href={`/${locale}/privacy`} className="hover:text-white transition-colors">{t('legalLinks.privacy')}</Link></li>
             </ul>
           </nav>
         </div>
