@@ -177,22 +177,22 @@
     "title": "Cosa dicono i nostri clienti",
     "items": [
       {
-        "name": "Olena K.",
-        "role": "Proprietaria",
-        "company": "Beauty Studio Elegance",
-        "text": "Finalmente tutto in un unico posto. Prima annotavo gli appuntamenti su un taccuino e le finanze in Excel. Ora vedo il quadro completo in 5 minuti."
-      },
-      {
         "name": "Andriy M.",
-        "role": "Direttore",
-        "company": "BarberShop Brothers",
+        "role": "Proprietario",
+        "company": "Clinica di kinesiterapia «Rukh»",
         "text": "Il bot Telegram è pura magia. I clienti ricevono promemoria e noi vediamo le loro risposte direttamente nel CRM."
       },
       {
-        "name": "Maria S.",
-        "role": "Responsabile",
-        "company": "Fitness Hub",
-        "text": "Magazzino e vendite funzionano alla perfezione. Spediamo ordini tramite Nova Poshta direttamente dal sistema."
+        "name": "Serhiy M.",
+        "role": "Proprietario",
+        "company": "Catena CoffeePoint",
+        "text": "Finalmente tutto in un unico posto. Prima tenevamo i registri su quaderni e le finanze su Excel. Ora vedo tutto in 5 minuti."
+      },
+      {
+        "name": "Iryna D.",
+        "role": "Direttrice",
+        "company": "Beauty Studio Elegance",
+        "text": "Magazzino e vendite funzionano alla perfezione. Spediamo gli ordini tramite Nova Poshta direttamente dal sistema."
       }
     ]
   },

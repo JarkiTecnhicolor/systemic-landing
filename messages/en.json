@@ -177,22 +177,22 @@
     "title": "What our clients say",
     "items": [
       {
-        "name": "Olena K.",
-        "role": "Owner",
-        "company": "Beauty Studio Elegance",
-        "text": "Finally everything in one place. I used to keep appointments in a notebook and finances in Excel. Now I see the full picture in 5 minutes."
-      },
-      {
         "name": "Andriy M.",
-        "role": "Director",
-        "company": "BarberShop Brothers",
-        "text": "The Telegram bot is pure magic. Clients get reminders and we see their replies right in the CRM."
+        "role": "Owner",
+        "company": "Kinesiotherapy Clinic «Rukh»",
+        "text": "The Telegram bot is pure magic. Clients get reminders, and we see their responses right in the CRM."
       },
       {
-        "name": "Maria S.",
-        "role": "Manager",
-        "company": "Fitness Hub",
-        "text": "Inventory and sales work flawlessly. We ship orders via Nova Poshta directly from the system."
+        "name": "Serhiy M.",
+        "role": "Owner",
+        "company": "CoffeePoint Chain",
+        "text": "Finally everything in one place. We used to keep records in notebooks and finances in Excel. Now I see the full picture in 5 minutes."
+      },
+      {
+        "name": "Iryna D.",
+        "role": "Director",
+        "company": "Beauty Studio Elegance",
+        "text": "Inventory and sales work flawlessly. We ship orders via Nova Poshta right from the system."
       }
     ]
   },
