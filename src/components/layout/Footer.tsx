@@ -44,6 +44,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href={`/${locale}/terms`} className="hover:text-white transition-colors">{t('legalLinks.terms')}</Link></li>
               <li><Link href={`/${locale}/privacy`} className="hover:text-white transition-colors">{t('legalLinks.privacy')}</Link></li>
+              <li><Link href={`/${locale}/refund`} className="hover:text-white transition-colors">{t('legalLinks.refund')}</Link></li>
             </ul>
           </nav>
         </div>

@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 
 type Props = {
-  contentKey: 'terms' | 'privacy';
+  contentKey: 'terms' | 'privacy' | 'refund';
 };
 
 export default function LegalPage({ contentKey }: Props) {
