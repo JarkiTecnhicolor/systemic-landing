@@ -34,14 +34,10 @@ export default function middleware(req: NextRequest) {
     const geoLocale = COUNTRY_TO_LOCALE[country];
 
     if (geoLocale) {
-      const headers = new Headers(req.headers);
-      headers.set('Accept-Language', `${geoLocale};q=1.0`);
-      const modifiedReq = new NextRequest(req.url, {
-        headers,
-        method: req.method,
-      });
-      req.cookies.getAll().forEach(c => modifiedReq.cookies.set(c.name, c.value));
-      response = intlMiddleware(modifiedReq) as NextResponse;
+      // Redirect directly to the geo-detected locale path
+      const url = req.nextUrl.clone();
+      url.pathname = `/${geoLocale}`;
+      response = NextResponse.redirect(url);
     } else {
       response = intlMiddleware(req) as NextResponse;
     }
