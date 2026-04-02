@@ -1,4 +1,7 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
+import { useRef, useState, useEffect, useCallback } from 'react';
 import FeatureCard from '../ui/FeatureCard';
 import AnimateOnScroll from '../ui/AnimateOnScroll';
 
@@ -29,28 +32,123 @@ const featureIcons = [
   <svg key="11" className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>,
 ];
 
+function ArrowButton({ direction, onClick, disabled }: { direction: 'left' | 'right'; onClick: () => void; disabled: boolean }) {
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      aria-label={direction === 'left' ? 'Previous' : 'Next'}
+      className={`hidden sm:flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white/5 backdrop-blur-sm transition-all duration-200 ${
+        disabled ? 'opacity-30 cursor-default' : 'hover:bg-accent/10 hover:border-accent/30 hover:text-accent cursor-pointer'
+      }`}
+    >
+      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+        {direction === 'left' ? (
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        ) : (
+          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        )}
+      </svg>
+    </button>
+  );
+}
+
 export default function FeaturesSection() {
   const t = useTranslations('features');
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const totalPages = Math.ceil(featureIcons.length / 4);
+
+  const updateScrollState = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 10);
+    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 10);
+
+    // Calculate active page from scroll position
+    const cardWidth = el.scrollWidth / featureIcons.length;
+    const page = Math.round(el.scrollLeft / (cardWidth * 4));
+    setActiveIndex(Math.min(page, totalPages - 1));
+  }, [totalPages]);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    updateScrollState();
+    el.addEventListener('scroll', updateScrollState, { passive: true });
+    window.addEventListener('resize', updateScrollState);
+    return () => {
+      el.removeEventListener('scroll', updateScrollState);
+      window.removeEventListener('resize', updateScrollState);
+    };
+  }, [updateScrollState]);
+
+  const scroll = (direction: 'left' | 'right') => {
+    const el = scrollRef.current;
+    if (!el) return;
+    // Scroll by ~4 cards width
+    const scrollAmount = el.clientWidth;
+    el.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+  };
 
   return (
     <section id="features" aria-labelledby="features-heading" className="py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 id="features-heading" className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">{t('title')}</h2>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto">{t('subtitle')}</p>
           </div>
         </AnimateOnScroll>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Carousel controls header */}
+        <div className="flex items-center justify-between mb-6">
+          {/* Page dots */}
+          <div className="flex gap-2">
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i}
+                onClick={() => {
+                  const el = scrollRef.current;
+                  if (!el) return;
+                  const cardWidth = el.scrollWidth / featureIcons.length;
+                  el.scrollTo({ left: cardWidth * 4 * i, behavior: 'smooth' });
+                }}
+                aria-label={`Page ${i + 1}`}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  i === activeIndex ? 'w-8 bg-accent' : 'w-2 bg-border hover:bg-text-secondary'
+                }`}
+              />
+            ))}
+          </div>
+
+          {/* Arrow buttons */}
+          <div className="flex gap-2">
+            <ArrowButton direction="left" onClick={() => scroll('left')} disabled={!canScrollLeft} />
+            <ArrowButton direction="right" onClick={() => scroll('right')} disabled={!canScrollRight} />
+          </div>
+        </div>
+
+        {/* Scrollable cards */}
+        <div
+          ref={scrollRef}
+          className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 -mb-4"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
           {featureIcons.map((icon, i) => (
-            <AnimateOnScroll key={i}>
+            <div
+              key={i}
+              className="snap-start shrink-0 w-[calc(85%-8px)] sm:w-[calc(50%-8px)] lg:w-[calc(25%-12px)]"
+            >
               <FeatureCard
                 icon={icon}
                 title={t(`items.${i}.title`)}
                 description={t(`items.${i}.description`)}
               />
-            </AnimateOnScroll>
+            </div>
           ))}
         </div>
       </div>
