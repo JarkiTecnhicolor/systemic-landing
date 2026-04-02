@@ -26,7 +26,11 @@ export default function middleware(req: NextRequest) {
   const hasLocaleCookie = req.cookies.has('NEXT_LOCALE');
   const pathname = req.nextUrl.pathname;
   const isRoot = pathname === '/';
-  const country = req.headers.get('x-vercel-ip-country') || '';
+  // Cloudflare proxies requests, so x-vercel-ip-country is empty.
+  // Use cf-ipcountry (set by Cloudflare) as primary, Vercel header as fallback.
+  const country = req.headers.get('cf-ipcountry')
+    || req.headers.get('x-vercel-ip-country')
+    || '';
 
   let response: NextResponse;
 
@@ -44,12 +48,6 @@ export default function middleware(req: NextRequest) {
   } else {
     response = intlMiddleware(req) as NextResponse;
   }
-
-  // Debug header — check what Vercel detects (remove after debugging)
-  response.headers.set('x-debug-country', country || 'EMPTY');
-  response.headers.set('x-debug-locale', COUNTRY_TO_LOCALE[country] || 'NONE');
-  response.headers.set('x-debug-path', pathname);
-  response.headers.set('x-debug-has-cookie', String(hasLocaleCookie));
 
   // Set pricing region cookie (ua or eu) based on IP country
   if (!req.cookies.has('region')) {
