@@ -33,7 +33,7 @@ export default function middleware(req: NextRequest) {
   if (isRoot && !hasLocaleCookie) {
     const geoLocale = COUNTRY_TO_LOCALE[country];
 
-    if (geoLocale && geoLocale !== routing.defaultLocale) {
+    if (geoLocale) {
       const headers = new Headers(req.headers);
       headers.set('Accept-Language', `${geoLocale};q=1.0`);
       const modifiedReq = new NextRequest(req.url, {
