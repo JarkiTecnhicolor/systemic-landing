@@ -45,6 +45,12 @@ export default function middleware(req: NextRequest) {
     response = intlMiddleware(req) as NextResponse;
   }
 
+  // Debug header — check what Vercel detects (remove after debugging)
+  response.headers.set('x-debug-country', country || 'EMPTY');
+  response.headers.set('x-debug-locale', COUNTRY_TO_LOCALE[country] || 'NONE');
+  response.headers.set('x-debug-path', pathname);
+  response.headers.set('x-debug-has-cookie', String(hasLocaleCookie));
+
   // Set pricing region cookie (ua or eu) based on IP country
   if (!req.cookies.has('region')) {
     const region = UA_COUNTRIES.has(country) ? 'ua' : 'eu';
