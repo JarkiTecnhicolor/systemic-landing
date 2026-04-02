@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Systemic — CRM para pequeñas y medianas empresas",
-    "description": "Clientes, citas, ventas, inventario, finanzas y comunicaciones — todo en un solo sistema."
+    "title": "Systemic — CRM, inventario, finanzas y envíos para negocios",
+    "description": "Clientes, citas, pedidos, inventario, nóminas, Nova Poshta, Meest Express, Telegram, Checkbox — todo en un solo sistema. Prueba 7 días gratis."
   },
   "nav": {
     "features": "Funciones",
@@ -11,101 +11,133 @@
     "tryFree": "Probar gratis"
   },
   "hero": {
-    "title": "CRM para pequeñas y medianas empresas",
-    "subtitle": "Clientes, citas, ventas, inventario, finanzas y comunicaciones — todo en un solo sistema. Comienza en 5 minutos.",
-    "cta": "Probar gratis",
-    "ctaSecondary": "Saber más",
-    "trustLine": "Inicio gratuito · Sin tarjeta de crédito"
+    "title": "Una herramienta en lugar de diez — para un negocio que crece",
+    "subtitle": "Clientes, calendario, pedidos, inventario, finanzas, nóminas, fidelización, integraciones con servicios postales y mensajeros — todo funciona junto en un solo sistema.",
+    "cta": "Prueba 7 días gratis",
+    "ctaSecondary": "Ver funciones",
+    "trustLine": "Prueba gratuita · Sin tarjeta de crédito · Comienza en 5 minutos"
   },
   "painPoints": {
     "title": "¿Te suena familiar?",
-    "subtitle": "Systemic resuelve los desafíos diarios de los pequeños negocios",
+    "subtitle": "Esto es lo que enfrentan los dueños de negocios cada día — hasta que lo automatizan",
     "items": [
       {
-        "title": "Los clientes se pierden",
-        "description": "Contactos dispersos entre libretas, mensajeros y hojas de cálculo. Sin una base de datos única con historial de interacciones."
+        "title": "Los clientes se pierden entre canales",
+        "description": "Alguien escribió por Telegram, alguien llamó, alguien vino sin cita. Sin una base única — sin control."
       },
       {
-        "title": "Finanzas en caos",
-        "description": "No conoces tu ganancia real. La caja no cuadra, los salarios se calculan manualmente, los gastos se pierden."
+        "title": "La ganancia es un misterio",
+        "description": "El dinero entra y sale, pero cuánto ganas realmente — no está claro. La caja no cuadra, las nóminas se hacen con calculadora."
       },
       {
-        "title": "Inventario sin control",
-        "description": "Los productos se agotan inesperadamente. Sin seguimiento de existencias, bajas ni compras."
+        "title": "El inventario vive su propia vida",
+        "description": "Se acabó el producto — te enteras por el cliente. Las existencias en Excel ya estaban desactualizadas ayer. Nadie registra las bajas."
       },
       {
-        "title": "Todo manual, todo lento",
-        "description": "Horas en rutina: citas en libretas, facturas en Excel, recordatorios de memoria. El negocio no puede escalar."
+        "title": "Rutina en lugar de crecimiento",
+        "description": "Citas en libretas, guías de envío a mano, recordatorios de memoria. 3 horas al día en lo que un sistema hace en segundos."
       }
     ]
   },
   "features": {
-    "title": "Todo lo que tu negocio necesita",
-    "subtitle": "Desde la cita del cliente hasta el resultado financiero — una herramienta en lugar de diez",
+
+
+
+
+
+
+    "title": "Todo para gestionar tu negocio — en una sola ventana",
+    "subtitle": "No necesitas 10 suscripciones. Cada módulo trabaja con los demás — los datos se complementan, nunca se duplican.",
     "items": [
       {
         "title": "Base de clientes",
-        "description": "Fichas de clientes con historial de visitas, compras, contactos y categorías. Búsqueda y filtros por cualquier campo."
+        "description": "Fichas completas con historial de visitas, compras y mensajes. Categorías, etiquetas, búsqueda por cualquier campo. Cumpleaños y notas."
       },
       {
         "title": "Calendario de citas",
-        "description": "Calendario drag-and-drop con citas recurrentes, múltiples servicios y filtro por profesional."
+        "description": "Planificación cómoda del día. Múltiples profesionales, servicios y ubicaciones. Visitas recurrentes y recordatorios automáticos."
       },
       {
-        "title": "Ventas y pedidos",
-        "description": "Ciclo completo de pedidos: crear, confirmar, empaquetar, enviar. Integración con Nova Poshta."
+        "title": "Pedidos y envíos",
+        "description": "Desde la creación hasta la entrega. Creación automática de guías por Nova Poshta y Meest Express. Baja del inventario al enviar."
       },
       {
-        "title": "Gestión de inventario",
-        "description": "Productos, existencias, compras, movimientos de stock. Baja automática en ventas."
+        "title": "Inventario y compras",
+        "description": "Catálogo de productos, existencias por almacén, compras, movimientos. Baja automática en ventas. Alertas de stock bajo."
       },
       {
-        "title": "Módulo financiero",
-        "description": "Transacciones, caja, turnos, resultados financieros. Visión completa de ingresos y gastos en tiempo real."
-      },
-      {
-        "title": "Bot de Telegram",
-        "description": "Mensajería bidireccional con clientes, recordatorios automáticos de citas — directamente en Telegram."
+        "title": "Finanzas en tiempo real",
+        "description": "Transacciones, caja, resultado financiero por cualquier período. Ve tu ganancia diariamente, no al final del mes."
       },
       {
         "title": "Nóminas y motivación",
-        "description": "Esquemas flexibles de motivación: porcentaje de servicios, tarifa fija, bonificaciones. Cálculo automático."
+        "description": "Porcentaje de servicios, tarifa fija, bonos — cualquier esquema. Cálculo automático por período. Motiva a tu equipo con transparencia."
+      },
+      {
+        "title": "Programas de fidelización",
+        "description": "Programas de bonos, acumulación de puntos, cupones y códigos promocionales. Los clientes vuelven más a menudo."
+      },
+      {
+        "title": "Producción",
+        "description": "Fichas técnicas (recetas), órdenes de producción, control de consumo de materiales. Para cafeterías, cocinas, microproducciones."
+      },
+      {
+        "title": "Telegram, SMS, Email",
+        "description": "Recordatorios de visitas, mensajería bidireccional con clientes por bot de Telegram. Notificaciones por SMS y email."
+      },
+      {
+        "title": "Marketplaces",
+        "description": "Sincronización de pedidos con Rozetka y Prom.ua. Vende en marketplaces — gestiona desde Systemic."
       },
       {
         "title": "Recibos fiscales (Checkbox)",
-        "description": "Integración con el registrador fiscal Checkbox. Recibos fiscales conforme a la legislación ucraniana."
+        "description": "Registrador fiscal Checkbox para crear recibos fiscales. Cumplimiento total con la legislación ucraniana."
+      },
+      {
+        "title": "Roles y control de acceso",
+        "description": "Restringe el acceso a módulos específicos. El especialista ve solo su agenda, el admin — todo. Cada acción queda registrada."
       }
     ]
   },
   "showcases": [
     {
-      "badge": "Núcleo",
-      "title": "Clientes y citas — todo bajo control",
-      "description": "Base de datos unificada con historial completo: visitas, compras, mensajes. Calendario drag-and-drop para planificación rápida del día.",
+      "badge": "Servicios",
+      "title": "Citas, visitas, clientes recurrentes — en automático",
+      "description": "Para salones, clínicas, estudios y todos los que trabajan con citas. Base de clientes con historial completo, calendario para planificar, recordatorios automáticos — los clientes llegan a tiempo y tú no pierdes tiempo en llamadas.",
       "bullets": [
-        "Fichas de clientes con categorías y etiquetas",
-        "Calendario de citas drag-and-drop",
-        "Citas recurrentes y recordatorios"
+        "Calendario de citas con filtros por profesional y ubicación",
+        "Recordatorios automáticos por Telegram, SMS, Email",
+        "Programas de fidelización, cupones y bonos para visitas recurrentes"
       ]
     },
     {
-      "badge": "Ventas",
-      "title": "Del pedido a la entrega",
-      "description": "Crea pedidos, controla estados, envía por Nova Poshta. Baja automática del inventario y creación de guías.",
+      "badge": "Ventas online",
+      "title": "Del pedido a 'Recibido' — sin trabajo manual",
+      "description": "Para tiendas online y vendedores en marketplaces. Ciclo completo: crear → empaquetar → guía → enviar → entregar. El inventario se descuenta automáticamente, la guía se crea en un clic.",
       "bullets": [
-        "Flujo completo de estados de pedido",
-        "Integración con Nova Poshta (guías)",
-        "Baja automática del inventario"
+        "Creación automática de guías (Nova Poshta, Meest Express)",
+        "Sincronización de pedidos con Rozetka y Prom.ua",
+        "Inventario con baja automática al enviar"
       ]
     },
     {
-      "badge": "Analítica",
-      "title": "Finanzas y analítica en tiempo real",
-      "description": "Sabe cuánto ganas cada día. Caja, transacciones, resultados financieros, nóminas — todo automático.",
+      "badge": "Retail",
+      "title": "Venta rápida, inventario y recibo fiscal — en una ventana",
+      "description": "Para cafeterías, tiendas, showrooms. Venta rápida desde caja, baja automática del inventario, recibo fiscal por Checkbox. Fichas técnicas para microproducciones — controla el consumo de ingredientes.",
       "bullets": [
-        "Resultados financieros de cualquier período",
-        "Cálculo automático de nóminas",
-        "Control de caja y turnos"
+        "Ventas POS con baja automática del inventario",
+        "Recibos fiscales por Checkbox",
+        "Fichas técnicas y órdenes de producción para microproducciones"
+      ]
+    },
+    {
+      "badge": "Finanzas",
+      "title": "Conoce tu ganancia — cada día, no al final del mes",
+      "description": "Caja, transacciones, resultado financiero, nóminas — todo se calcula automáticamente. El monitor de negocio muestra métricas clave en tiempo real. Toma decisiones basadas en números, no en intuición.",
+      "bullets": [
+        "Resultado financiero por cualquier período",
+        "Cálculo automático de nóminas por esquemas de motivación",
+        "Monitor de negocio con KPIs clave en tiempo real"
       ]
     }
   ],
@@ -197,35 +229,43 @@
     "title": "Preguntas frecuentes",
     "items": [
       {
-        "question": "¿Necesito instalar algún programa?",
-        "answer": "No. Systemic funciona en el navegador — en computadora, tableta y teléfono. No hay nada que instalar."
+        "question": "¿Necesito instalar algún software?",
+        "answer": "No. Systemic funciona en el navegador — en computadora, tablet y teléfono. No hay nada que instalar."
       },
       {
-        "question": "¿Hay un plan gratuito?",
-        "answer": "Sí, el plan Starter es gratuito para siempre. Puedes cambiar a un plan de pago cuando tu negocio necesite más funciones."
+        "question": "¿Hay un período de prueba gratuito?",
+        "answer": "Sí, cada cuenta nueva recibe 7 días de prueba gratuita con acceso completo a todos los módulos. Sin tarjeta de crédito."
+      },
+      {
+        "question": "¿Qué integraciones se soportan?",
+        "answer": "Nova Poshta, Meest Express, bot de Telegram, Checkbox (registrador fiscal), SMS y notificaciones por Email. Todas las integraciones incluidas en cada plan."
       },
       {
         "question": "¿Puedo migrar datos de otro sistema?",
-        "answer": "Sí, te ayudaremos a migrar tus datos desde Excel u otro CRM. Contacta a nuestro equipo de soporte."
+        "answer": "Sí, te ayudaremos a migrar tus datos desde Excel u otro CRM. Contacta a nuestro soporte."
       },
       {
-        "question": "¿Funciona en el móvil?",
-        "answer": "Sí, la interfaz adaptativa funciona en cualquier dispositivo con navegador — smartphone, tableta, portátil."
+        "question": "¿Funciona en el teléfono?",
+        "answer": "Sí, la interfaz responsive funciona en cualquier dispositivo con navegador — smartphone, tablet, laptop."
       },
       {
-        "question": "¿Hay integración con caja registradora fiscal?",
-        "answer": "Sí, integración con el registrador fiscal Checkbox para crear recibos fiscales conforme a la legislación ucraniana."
+        "question": "¿Puedo gestionar múltiples ubicaciones?",
+        "answer": "Sí, Systemic soporta múltiples ubicaciones. Cada ubicación puede tener su propio equipo, horario e inventario, mientras las finanzas y la base de clientes son compartidas."
+      },
+      {
+        "question": "¿Cómo funciona el control de acceso?",
+        "answer": "Puedes restringir el acceso de los empleados a módulos específicos. Por ejemplo, un especialista solo verá su propia agenda, no las finanzas ni la base de clientes."
       },
       {
         "question": "¿Cuántos empleados puedo agregar?",
-        "answer": "En el plan gratuito — hasta 2. En los planes de pago — sin límite."
+        "answer": "Depende del plan: Start — hasta 2, Business — hasta 5, Pro — hasta 15 usuarios."
       }
     ]
   },
   "cta": {
-    "title": "¿Listo para automatizar tu negocio?",
-    "subtitle": "Únete a Systemic — comienza gratis hoy",
-    "button": "Crear cuenta",
+    "title": "Deja de hacer malabares con diez herramientas",
+    "subtitle": "Prueba Systemic gratis — después de 7 días no querrás volver a las hojas de cálculo",
+    "button": "Comenzar prueba gratuita",
     "contact": "o contáctanos:"
   },
   "footer": {

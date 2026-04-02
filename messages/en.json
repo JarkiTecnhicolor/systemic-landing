@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Systemic — CRM for Small & Medium Business",
-    "description": "Clients, appointments, sales, inventory, finances & communications — all in one system."
+    "title": "Systemic — CRM, Inventory, Finance & Shipping for Business",
+    "description": "Clients, appointments, orders, inventory, payroll, Nova Poshta, Meest Express, Telegram, Checkbox — all in one system. Try 7 days free."
   },
   "nav": {
     "features": "Features",
@@ -11,101 +11,127 @@
     "tryFree": "Try for free"
   },
   "hero": {
-    "title": "CRM for small and medium business",
-    "subtitle": "Clients, appointments, sales, inventory, finances & communications — all in one system. Get started in 5 minutes.",
-    "cta": "Try for free",
-    "ctaSecondary": "Learn more",
-    "trustLine": "Free to start · No credit card required"
+    "title": "One tool instead of ten — for a business that grows",
+    "subtitle": "Clients, calendar, orders, inventory, finances, payroll, loyalty, integrations with postal services and messengers — all working together in one system.",
+    "cta": "Try 7 days free",
+    "ctaSecondary": "See features",
+    "trustLine": "Free trial · No credit card required · Start in 5 minutes"
   },
   "painPoints": {
     "title": "Sound familiar?",
-    "subtitle": "Systemic solves everyday challenges of small business",
+    "subtitle": "This is what business owners deal with every day — until they automate it",
     "items": [
       {
-        "title": "Clients get lost",
-        "description": "Contacts scattered across notebooks, messengers and spreadsheets. No single database with interaction history."
+        "title": "Clients get lost between channels",
+        "description": "Someone texted on Telegram, someone called, someone walked in without an appointment. No single database — no control."
       },
       {
-        "title": "Finances in chaos",
-        "description": "You don't know your real profit. Cash doesn't add up, salaries calculated manually, expenses get lost."
+        "title": "Profit is a mystery",
+        "description": "Money comes in and goes out, but how much you actually earn — unclear. Cash doesn't add up, payroll done on a calculator."
       },
       {
-        "title": "Inventory out of control",
-        "description": "Products run out unexpectedly. No tracking of stock levels, write-offs or purchases."
+        "title": "Inventory has a mind of its own",
+        "description": "Product ran out — you find out from a client. Excel stock levels were outdated yesterday. Nobody tracks write-offs."
       },
       {
-        "title": "Everything manual, everything slow",
-        "description": "Hours on routine: appointments in notebooks, invoices in Excel, reminders from memory. Business can't scale."
+        "title": "Routine instead of growth",
+        "description": "Appointments in notebooks, waybills by hand, reminders from memory. 3 hours a day on what a system does in seconds."
       }
     ]
   },
   "features": {
-    "title": "Everything your business needs",
-    "subtitle": "From client appointments to financial results — one tool instead of ten",
+    "title": "Everything to manage your business — in one window",
+    "subtitle": "No need for 10 subscriptions. Every module works with others — data complements, never duplicates.",
     "items": [
       {
         "title": "Client Database",
-        "description": "Client cards with visit history, purchases, contacts and categories. Search and filter by any field."
+        "description": "Full cards with visit, purchase and message history. Categories, tags, search by any field. Birthdays and notes."
       },
       {
         "title": "Appointment Calendar",
-        "description": "Drag-and-drop calendar with recurring appointments, multiple services and staff filtering."
+        "description": "Convenient day planning. Multiple staff, services and locations. Recurring visits and automatic client reminders."
       },
       {
-        "title": "Sales & Orders",
-        "description": "Full order cycle: create, confirm, pack, ship. Nova Poshta integration for delivery."
+        "title": "Orders & Shipping",
+        "description": "From creation to delivery. Automatic waybill creation via Nova Poshta and Meest Express. Inventory write-off on shipment."
       },
       {
-        "title": "Inventory Management",
-        "description": "Products, stock levels, purchases, stock movements. Automatic write-off on sales."
+        "title": "Inventory & Purchasing",
+        "description": "Product catalog, stock levels per warehouse, purchases, stock movements. Automatic write-off on sales. Low stock alerts."
       },
       {
-        "title": "Financial Module",
-        "description": "Transactions, cash register, shifts, financial results. Complete P&L picture in real time."
-      },
-      {
-        "title": "Telegram Bot",
-        "description": "Two-way messaging with clients, automatic appointment reminders — directly in Telegram."
+        "title": "Real-time Finances",
+        "description": "Transactions, cash register, financial results for any period. See your profit daily, not at month's end."
       },
       {
         "title": "Payroll & Motivation",
-        "description": "Flexible motivation schemes: service percentage, fixed rate, bonuses. Automatic calculation."
+        "description": "Service percentage, fixed rate, bonuses — any scheme. Automatic calculation per period. Motivate your team transparently."
+      },
+      {
+        "title": "Loyalty Programs",
+        "description": "Bonus programs, point accumulation, coupons and promo codes. Clients come back more often."
+      },
+      {
+        "title": "Production",
+        "description": "Tech cards (recipes), production orders, material consumption tracking. For cafes, kitchens, micro-productions."
+      },
+      {
+        "title": "Telegram, SMS, Email",
+        "description": "Visit reminders, two-way messaging with clients via Telegram bot. SMS and email notifications."
+      },
+      {
+        "title": "Marketplaces",
+        "description": "Order sync with Rozetka and Prom.ua. Sell on marketplaces — manage from Systemic."
       },
       {
         "title": "Fiscal Receipts (Checkbox)",
-        "description": "Integration with Checkbox fiscal register. Compliant fiscal receipts per Ukrainian law."
+        "description": "Checkbox fiscal register for creating fiscal receipts. Full compliance with Ukrainian law."
+      },
+      {
+        "title": "Roles & Access Control",
+        "description": "Restrict access to specific modules. A specialist sees only their schedule, an admin — everything. Every action is logged."
       }
     ]
   },
   "showcases": [
     {
-      "badge": "Core",
-      "title": "Clients & appointments — fully under control",
-      "description": "Unified client database with complete history: visits, purchases, messages. Drag-and-drop calendar for quick day planning.",
+      "badge": "Services",
+      "title": "Appointments, visits, returning clients — on autopilot",
+      "description": "For salons, clinics, studios and anyone working with appointments. Client database with full history, calendar for planning, automatic reminders — clients show up on time, and you don't waste time on calls.",
       "bullets": [
-        "Client cards with categories and tags",
-        "Drag-and-drop appointment calendar",
-        "Recurring appointments and reminders"
+        "Appointment calendar with staff and location filters",
+        "Automatic reminders via Telegram, SMS, Email",
+        "Loyalty programs, coupons and bonuses for repeat visits"
       ]
     },
     {
-      "badge": "Sales",
-      "title": "From order to delivery",
-      "description": "Create orders, track statuses, ship via Nova Poshta. Automatic inventory write-off and waybill creation.",
+      "badge": "Online Sales",
+      "title": "From order to 'Received' — without manual work",
+      "description": "For online stores and marketplace sellers. Full order cycle: create → pack → waybill → ship → deliver. Inventory writes off automatically, waybill created in one click.",
       "bullets": [
-        "Full order status workflow",
-        "Nova Poshta integration (waybills)",
-        "Automatic inventory write-off"
+        "Automatic waybill creation (Nova Poshta, Meest Express)",
+        "Order sync with Rozetka and Prom.ua",
+        "Inventory with automatic write-off on shipment"
       ]
     },
     {
-      "badge": "Analytics",
-      "title": "Finances & analytics in real time",
-      "description": "Know how much you earn every day. Cash register, transactions, financial results, payroll — all automatic.",
+      "badge": "Retail",
+      "title": "Quick sale, inventory & fiscal receipt — in one window",
+      "description": "For cafes, shops, showrooms. Quick POS sales, automatic inventory write-off, fiscal receipt via Checkbox. Tech cards for micro-productions — control ingredient costs.",
+      "bullets": [
+        "POS sales with automatic inventory write-off",
+        "Fiscal receipts via Checkbox",
+        "Tech cards and production orders for micro-productions"
+      ]
+    },
+    {
+      "badge": "Finances",
+      "title": "Know your profit — daily, not at month's end",
+      "description": "Cash register, transactions, financial results, payroll — all calculated automatically. Business monitor shows key metrics in real time. Make decisions based on numbers, not intuition.",
       "bullets": [
         "Financial results for any period",
-        "Automatic payroll calculation",
-        "Cash register and shift control"
+        "Automatic payroll calculation by motivation schemes",
+        "Business monitor with key KPIs in real time"
       ]
     }
   ],
@@ -201,8 +227,12 @@
         "answer": "No. Systemic works in the browser — on desktop, tablet and phone. Nothing to install."
       },
       {
-        "question": "Is there a free plan?",
-        "answer": "Yes, the Starter plan is free forever. You can upgrade to a paid plan when your business needs more features."
+        "question": "Is there a free trial?",
+        "answer": "Yes, every new account gets a 7-day free trial with full access to all modules. No credit card required."
+      },
+      {
+        "question": "What integrations are supported?",
+        "answer": "Nova Poshta, Meest Express, Telegram bot, Checkbox (fiscal register), SMS and Email notifications. All integrations included in every plan."
       },
       {
         "question": "Can I migrate data from another system?",
@@ -213,19 +243,23 @@
         "answer": "Yes, the responsive interface works on any device with a browser — smartphone, tablet, laptop."
       },
       {
-        "question": "Is there a fiscal receipt integration?",
-        "answer": "Yes, integration with Checkbox fiscal register for creating compliant fiscal receipts per Ukrainian law."
+        "question": "Can I manage multiple locations?",
+        "answer": "Yes, Systemic supports multi-location management. Each location can have its own team, schedule and inventory, while finances and client database remain shared."
+      },
+      {
+        "question": "How does access control work?",
+        "answer": "You can restrict employee access to specific modules. For example, a specialist only sees their own schedule, not finances or the client database."
       },
       {
         "question": "How many staff members can I add?",
-        "answer": "On the free plan — up to 2. On paid plans — unlimited."
+        "answer": "Depends on the plan: Start — up to 2, Business — up to 5, Pro — up to 15 users."
       }
     ]
   },
   "cta": {
-    "title": "Ready to automate your business?",
-    "subtitle": "Join Systemic — start for free today",
-    "button": "Create account",
+    "title": "Stop juggling ten different tools",
+    "subtitle": "Try Systemic for free — after 7 days you won't want to go back to spreadsheets",
+    "button": "Start free trial",
     "contact": "or reach out to us:"
   },
   "footer": {
