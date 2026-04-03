@@ -59,7 +59,7 @@ export default function FeatureShowcase() {
   const t = useTranslations();
 
   const showcaseCount = 4;
-  const showcaseImages = ['showcase-0.jpg', 'showcase-1.jpg', 'showcase-2.jpg', null];
+  const showcaseImages = ['showcase-0.jpg', 'showcase-1.jpg', 'showcase-2.png', 'showcase-3.jpg'];
 
   return (
     <section className="py-24 bg-bg-alt">

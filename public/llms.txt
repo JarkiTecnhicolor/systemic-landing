@@ -46,7 +46,7 @@ Systemic is a cloud-based CRM (Customer Relationship Management) system designed
 
 - Website: https://systemic-crm.com
 - App: https://app.systemic-crm.com
-- Contact: hello@systemic-crm.com
+- Contact: support@systemic-crm.com
 
 ## Languages
 
