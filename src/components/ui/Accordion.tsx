@@ -24,7 +24,7 @@ export default function Accordion({ items }: { items: AccordionItem[] }) {
             </svg>
           </button>
           <div className={`overflow-hidden transition-all duration-300 ${openIndex === i ? 'max-h-96 pb-5' : 'max-h-0'}`}>
-            <p className="text-text-secondary leading-relaxed">{item.answer}</p>
+            <p className="text-text-secondary leading-relaxed" dangerouslySetInnerHTML={{ __html: item.answer }} />
           </div>
         </div>
       ))}

@@ -7,6 +7,7 @@
     "features": "Fonctionnalités",
     "pricing": "Tarifs",
     "faq": "FAQ",
+    "help": "Help",
     "login": "Se connecter",
     "tryFree": "Essayer gratuitement"
   },
@@ -274,7 +275,8 @@
     "companyLinks": {
       "about": "À propos",
       "contact": "Contact",
-      "blog": "Blog"
+      "blog": "Blog",
+      "help": "Help"
     },
     "legal": "Juridique",
     "legalLinks": {

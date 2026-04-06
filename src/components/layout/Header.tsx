@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Button from '../ui/Button';
 import LocaleSwitcher from './LocaleSwitcher';
 import MobileMenu from './MobileMenu';
@@ -9,6 +9,7 @@ import { APP_URL, REGISTER_URL } from '../../lib/constants';
 
 export default function Header() {
   const t = useTranslations('nav');
+  const locale = useLocale();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -22,6 +23,7 @@ export default function Header() {
     { label: t('features'), href: '#features' },
     { label: t('pricing'), href: '#pricing' },
     { label: t('faq'), href: '#faq' },
+    { label: t('help'), href: `/${locale}/help` },
   ];
 
   return (

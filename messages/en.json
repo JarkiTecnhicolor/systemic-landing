@@ -7,6 +7,7 @@
     "features": "Features",
     "pricing": "Pricing",
     "faq": "FAQ",
+    "help": "Help",
     "login": "Log in",
     "tryFree": "Try for free"
   },
@@ -244,7 +245,7 @@
       },
       {
         "question": "Can I manage multiple locations?",
-        "answer": "Yes, Systemic supports multi-location management. Each location can have its own team, schedule and inventory, while finances and client database remain shared."
+        "answer": "Yes, Systemic supports multi-location management. Each location has its own checkout, team, schedule and inventory, while the client database and loyalty programs are shared. <a href='/en/help/locations' style='color:#6366f1;text-decoration:underline'>Read the full guide →</a>"
       },
       {
         "question": "How does access control work?",
@@ -274,7 +275,8 @@
     "companyLinks": {
       "about": "About",
       "contact": "Contact",
-      "blog": "Blog"
+      "blog": "Blog",
+      "help": "Help Center"
     },
     "legal": "Legal",
     "legalLinks": {
@@ -331,6 +333,29 @@
         "<h2>6. Exceptional Cases</h2><p>6.1. The Provider may consider individual refund requests in the following cases:</p><ul><li>Extended technical failure of the Service (more than 72 consecutive hours) that prevented usage.</li><li>Erroneous double charge.</li></ul><p>6.2. To request a review, contact <a href=\"mailto:support@systemic-crm.com\">support@systemic-crm.com</a> within 7 days of the issue occurring.</p>",
         "<h2>7. Contact Information</h2><p>For refund and exchange inquiries:</p><p>Provider: LIMITED LIABILITY COMPANY \"SYSTEMIK\"</p><p>Email: <a href=\"mailto:support@systemic-crm.com\">support@systemic-crm.com</a></p><p>Address: Ukraine, 02002, Kyiv, 8 Okipnoi Raisy St., office 397</p>"
       ]
+    }
+  },
+  "help": {
+    "title": "Help Center",
+    "subtitle": "Guides and instructions for working with Systemic CRM",
+    "backToHelp": "← Back to Help Center",
+    "articles": {
+      "locations": {
+        "title": "Locations in Systemic CRM — Complete Guide",
+        "description": "How locations work: multi-site, checkout, warehouses, staff, reports",
+        "sections": [
+          "<h2>What is a location?</h2><p>A location is your physical point of business: a beauty salon, clinic, shop, studio, or office. If you have one location, the system works automatically — no setup needed. If you have multiple locations, you can add them in settings and switch between them with one click.</p>",
+          "<h2>How to add a new location?</h2><p>Go to <strong>Settings → Locations → Add location</strong>. For each location you can specify:</p><ul><li>Name (e.g. &ldquo;Main salon&rdquo;, &ldquo;Downtown branch&rdquo;)</li><li>Address</li><li>Phone number</li><li>Color (for visual distinction in the interface)</li><li>Legal name, tax ID, bank details (for documents)</li></ul><p>At least one location always exists — &ldquo;Main&rdquo;. You can rename it but cannot delete it.</p>",
+          "<h2>How to switch between locations?</h2><p>If you have more than one location, a switcher appears in the sidebar — showing the current location name with a colored dot. Click it to open a list of all your locations. Select one — and all modules (calendar, orders, finances, checkout) will immediately show data for that specific location.</p><p>The system remembers your last selected location — you'll return to it on your next login.</p><p>If you only have one location, the switcher is hidden and everything works automatically.</p>",
+          "<h2>What each location sees</h2><h3>Calendar & Appointments</h3><p>Each appointment belongs to the location where it was created. When switching locations, you only see appointments for that specific location.</p><h3>Orders</h3><p>Orders also belong to a specific location. When creating an order, it's automatically linked to your current location.</p><h3>Store (POS)</h3><p>Each sale in the Store is recorded for the current location. Sales and returns history is displayed only for the selected location.</p><h3>Finances</h3><p>All payments, refunds, and financial operations are displayed for the current location.</p>",
+          "<h2>Checkout (Checkbox PRRO)</h2><p>Each location has its <strong>own connection</strong> to Checkbox:</p><ul><li>Its own cash register license key</li><li>Its own cashier PIN code</li><li>Its own tax rates</li><li>Its own POS terminal (PayLink)</li></ul><p>Checkout setup is done separately for each location. Switch to the desired location via the sidebar, open <strong>Checkbox PRRO</strong>, and enter the license key and PIN code for that specific location.</p><p>Cash register shifts are also separate — a shift opened at one location does not affect another.</p><p>If you set up Checkbox before the multi-location update, your existing settings will continue to work as a fallback until you configure each location separately.</p>",
+          "<h2>What's shared across all locations?</h2><h3>Clients</h3><p>The client database is shared across the entire business. A client added at one location is automatically available at all others.</p><h3>Services</h3><p>The service catalog is shared. You create a service once — it's available for booking at any location. Individual staff members can have custom prices or durations for the same service.</p><h3>Products</h3><p>The product catalog is also shared. You don't need to create the same product twice for different locations. However, stock levels depend on the warehouse — each warehouse is linked to its own location.</p><h3>Loyalty Programs</h3><p>Bonus points, discount tiers, coupons, and subscriptions work the same across all locations. If a client earned points at one location, they can use them at another.</p><h3>Integration Settings</h3><p>Connections to Nova Poshta, Telegram bot, SMS, and Email are configured once and work across the entire account.</p>",
+          "<h2>How do warehouses and stock work?</h2><p>Each warehouse is linked to a specific location. For example:</p><ul><li>&ldquo;Main warehouse&rdquo; → Central salon</li><li>&ldquo;Downtown warehouse&rdquo; → Downtown branch</li></ul><p>The product is the same (shampoo X), but its quantity at each warehouse is different. A sale in the Store deducts from the warehouse you selected. Transfers between warehouses allow you to move stock between locations.</p>",
+          "<h2>How do staff members work?</h2><p>By default, each staff member is displayed at <strong>all locations</strong>. This means a client can book them at any location.</p><p>If you have more than one location, the staff member's profile shows an option to restrict them to specific locations. For example, you can specify that stylist Anna works only at the central salon — then she won't appear in the calendar at other locations.</p><h3>Schedules per location</h3><p>The same staff member can have a <strong>different schedule</strong> at different locations. For example: at the central salon — Monday, Wednesday, Friday; downtown — Tuesday and Thursday. The system automatically accounts for this when booking.</p>",
+          "<h2>Reports & Analytics</h2><p>The <strong>Reports</strong> section has a location filter. You can:</p><ul><li>View data for a specific location</li><li>View combined data across all locations</li></ul><p>This allows you to compare revenue, workload, and efficiency across your different locations.</p>",
+          "<h2>Frequently Asked Questions</h2><p><strong>Can I move an appointment from one location to another?</strong><br/>No, appointments are linked to a location. If needed, cancel the appointment at one location and create a new one at another.</p><p><strong>Can staff see data from other locations?</strong><br/>No. Everyone only sees the location they selected. The exception is the Reports section, where managers can view combined information across all locations.</p><p><strong>What happens if I delete a location?</strong><br/>You can only delete a location that has no staff, warehouses, or orders attached. Move everything to another location first. At least one location must always exist.</p><p><strong>Do I need a separate Checkbox (cash register) for each location?</strong><br/>Yes. Each location connects to its own cash register with a separate license key and cashier PIN code.</p><p><strong>Do I need a separate POS terminal for each location?</strong><br/>Yes, if you use PayLink. Each location can have its own bank terminal — configured in the Checkbox PRRO section for the corresponding location.</p>"
+        ]
+      }
     }
   }
 }

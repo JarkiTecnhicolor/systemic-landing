@@ -35,7 +35,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="hover:text-white transition-colors">{t('companyLinks.about')}</a></li>
               <li><a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-white transition-colors">{t('companyLinks.contact')}</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">{t('companyLinks.blog')}</a></li>
+              <li><Link href={`/${locale}/help`} className="hover:text-white transition-colors">{t('companyLinks.help')}</Link></li>
             </ul>
           </nav>
 
