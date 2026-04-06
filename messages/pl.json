@@ -334,5 +334,17 @@
         "<h2>7. Contact Information</h2><p>For refund and exchange inquiries:</p><p>Provider: LIMITED LIABILITY COMPANY \"SYSTEMIK\"</p><p>Email: <a href=\"mailto:support@systemic-crm.com\">support@systemic-crm.com</a></p><p>Address: Ukraine, 02002, Kyiv, 8 Okipnoi Raisy St., office 397</p>"
       ]
     }
+  },
+  "help": {
+    "title": "Pomoc",
+    "subtitle": "Przewodniki i instrukcje dla Systemic CRM",
+    "backToHelp": "← Powrót do pomocy",
+    "articles": {
+      "locations": {
+        "title": "Lokalizacje — Kompletny przewodnik",
+        "description": "Jak działają lokalizacje: wiele lokalizacji, kasa, magazyny, personel, raporty",
+        "sections": ["<p>Ten artykuł jest dostępny w języku <a href='/uk/help/locations'>ukraińskim</a> i <a href='/en/help/locations'>angielskim</a>.</p>"]
+      }
+    }
   }
 }
