@@ -76,12 +76,12 @@ export default function FeatureShowcase() {
                   {t(`showcases.${i}.description`)}
                 </p>
                 <ul className="space-y-2">
-                  {[0, 1, 2].map((j) => (
+                  {(t.raw(`showcases.${i}.bullets`) as string[]).map((bullet: string, j: number) => (
                     <li key={j} className="flex items-center gap-2 text-sm text-text-primary">
                       <svg className="h-5 w-5 text-accent shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                       </svg>
-                      {t(`showcases.${i}.bullets.${j}`)}
+                      {bullet}
                     </li>
                   ))}
                 </ul>
