@@ -81,10 +81,6 @@
         "description": "Visit reminders, two-way messaging with clients via Telegram bot. SMS and email notifications."
       },
       {
-        "title": "Marketplaces",
-        "description": "Order sync with Rozetka and Prom.ua. Sell on marketplaces — manage from Systemic."
-      },
-      {
         "title": "Fiscal Receipts (Checkbox)",
         "description": "Checkbox fiscal register for creating fiscal receipts. Full compliance with Ukrainian law."
       },
@@ -111,7 +107,6 @@
       "description": "For online stores and marketplace sellers. Full order cycle: create → pack → waybill → ship → deliver. Inventory writes off automatically, waybill created in one click.",
       "bullets": [
         "Automatic waybill creation (Nova Poshta, Meest Express)",
-        "Order sync with Rozetka and Prom.ua",
         "Inventory with automatic write-off on shipment"
       ]
     },

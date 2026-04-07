@@ -81,10 +81,6 @@
         "description": "Przypomnienia o wizytach, dwukierunkowa komunikacja z klientami przez bota Telegram. Powiadomienia SMS i email."
       },
       {
-        "title": "Marketplace",
-        "description": "Synchronizacja zamówień z Rozetka i Prom.ua. Sprzedawaj na marketplace — zarządzaj z Systemic."
-      },
-      {
         "title": "Paragony fiskalne (Checkbox)",
         "description": "Rejestrator fiskalny Checkbox do tworzenia paragonów fiskalnych. Pełna zgodność z ustawodawstwem ukraińskim."
       },
@@ -111,7 +107,6 @@
       "description": "Dla sklepów internetowych i sprzedawców na marketplace. Pełny cykl: utworzenie → pakowanie → list przewozowy → wysyłka → dostawa. Magazyn odpisuje się automatycznie, list przewozowy tworzy się jednym kliknięciem.",
       "bullets": [
         "Automatyczne tworzenie listów przewozowych (Nova Poshta, Meest Express)",
-        "Synchronizacja zamówień z Rozetka i Prom.ua",
         "Magazyn z automatycznym odpisem przy wysyłce"
       ]
     },

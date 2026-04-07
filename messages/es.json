@@ -87,10 +87,6 @@
         "description": "Recordatorios de visitas, mensajería bidireccional con clientes por bot de Telegram. Notificaciones por SMS y email."
       },
       {
-        "title": "Marketplaces",
-        "description": "Sincronización de pedidos con Rozetka y Prom.ua. Vende en marketplaces — gestiona desde Systemic."
-      },
-      {
         "title": "Recibos fiscales (Checkbox)",
         "description": "Registrador fiscal Checkbox para crear recibos fiscales. Cumplimiento total con la legislación ucraniana."
       },
@@ -117,7 +113,6 @@
       "description": "Para tiendas online y vendedores en marketplaces. Ciclo completo: crear → empaquetar → guía → enviar → entregar. El inventario se descuenta automáticamente, la guía se crea en un clic.",
       "bullets": [
         "Creación automática de guías (Nova Poshta, Meest Express)",
-        "Sincronización de pedidos con Rozetka y Prom.ua",
         "Inventario con baja automática al enviar"
       ]
     },
