@@ -23,7 +23,6 @@ export default function Header() {
     { label: t('features'), href: '#features' },
     { label: t('pricing'), href: '#pricing' },
     { label: t('faq'), href: '#faq' },
-    { label: t('help'), href: `/${locale}/help` },
   ];
 
   return (
