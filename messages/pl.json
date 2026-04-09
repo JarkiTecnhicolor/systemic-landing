@@ -338,7 +338,16 @@
       "locations": {
         "title": "Lokalizacje — Kompletny przewodnik",
         "description": "Jak działają lokalizacje: wiele lokalizacji, kasa, magazyny, personel, raporty",
-        "sections": ["<p>Ten artykuł jest dostępny w języku <a href='/uk/help/locations'>ukraińskim</a> i <a href='/en/help/locations'>angielskim</a>.</p>"]
+        "sections": [
+          "<p>Ten artykuł jest dostępny w języku <a href='/uk/help/locations'>ukraińskim</a> i <a href='/en/help/locations'>angielskim</a>.</p>"
+        ]
+      },
+      "staff-and-salaries": {
+        "title": "Staff, Salaries & Access — Guide",
+        "description": "How roles, data visibility, schedules and motivation schemes work",
+        "sections": [
+          "<p>This article is available in <a href='/uk/help/staff-and-salaries'>Ukrainian</a> and <a href='/en/help/staff-and-salaries'>English</a>.</p>"
+        ]
       }
     }
   }

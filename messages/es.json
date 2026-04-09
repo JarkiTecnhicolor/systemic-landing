@@ -41,12 +41,6 @@
     ]
   },
   "features": {
-
-
-
-
-
-
     "title": "Todo para gestionar tu negocio — en una sola ventana",
     "subtitle": "No necesitas 10 suscripciones. Cada módulo trabaja con los demás — los datos se complementan, nunca se duplican.",
     "items": [
@@ -344,7 +338,16 @@
       "locations": {
         "title": "Ubicaciones — Guía completa",
         "description": "Cómo funcionan las ubicaciones: multi-sede, caja, almacenes, personal, informes",
-        "sections": ["<p>Este artículo está disponible en <a href='/uk/help/locations'>ucraniano</a> e <a href='/en/help/locations'>inglés</a>.</p>"]
+        "sections": [
+          "<p>Este artículo está disponible en <a href='/uk/help/locations'>ucraniano</a> e <a href='/en/help/locations'>inglés</a>.</p>"
+        ]
+      },
+      "staff-and-salaries": {
+        "title": "Staff, Salaries & Access — Guide",
+        "description": "How roles, data visibility, schedules and motivation schemes work",
+        "sections": [
+          "<p>This article is available in <a href='/uk/help/staff-and-salaries'>Ukrainian</a> and <a href='/en/help/staff-and-salaries'>English</a>.</p>"
+        ]
       }
     }
   }

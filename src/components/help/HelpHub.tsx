@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 const ARTICLES = [
   { key: 'locations', icon: '📍' },
+  { key: 'staff-and-salaries', icon: '💰' },
 ];
 
 export default function HelpHub() {

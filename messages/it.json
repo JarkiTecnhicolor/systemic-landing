@@ -338,7 +338,16 @@
       "locations": {
         "title": "Sedi — Guida completa",
         "description": "Come funzionano le sedi: multi-sede, cassa, magazzini, personale, report",
-        "sections": ["<p>Questo articolo è disponibile in <a href='/uk/help/locations'>ucraino</a> e in <a href='/en/help/locations'>inglese</a>.</p>"]
+        "sections": [
+          "<p>Questo articolo è disponibile in <a href='/uk/help/locations'>ucraino</a> e in <a href='/en/help/locations'>inglese</a>.</p>"
+        ]
+      },
+      "staff-and-salaries": {
+        "title": "Staff, Salaries & Access — Guide",
+        "description": "How roles, data visibility, schedules and motivation schemes work",
+        "sections": [
+          "<p>This article is available in <a href='/uk/help/staff-and-salaries'>Ukrainian</a> and <a href='/en/help/staff-and-salaries'>English</a>.</p>"
+        ]
       }
     }
   }
