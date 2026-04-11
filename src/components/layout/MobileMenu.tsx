@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import Button from '../ui/Button';
 import LocaleSwitcher from './LocaleSwitcher';
@@ -12,9 +13,16 @@ type Props = {
 };
 
 export default function MobileMenu({ isOpen, onClose, navLinks }: Props) {
-  if (!isOpen) return null;
-
   const t = useTranslations('nav');
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      return () => { document.body.style.overflow = ''; };
+    }
+  }, [isOpen]);
+
+  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 md:hidden">
@@ -25,7 +33,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: Props) {
             <img src="/images/logo.png" alt="Systemic" className="h-7 w-7 rounded-lg" />
             <img src="/images/logo-text.png" alt="Systemic" className="h-4 brightness-0" />
           </div>
-          <button onClick={onClose} className="p-2 text-text-secondary">
+          <button onClick={onClose} className="p-2 text-text-secondary cursor-pointer">
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>

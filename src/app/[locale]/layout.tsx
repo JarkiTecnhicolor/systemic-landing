@@ -4,11 +4,18 @@ import { notFound } from 'next/navigation';
 import { routing } from '../../../i18n/routing';
 import { Inter } from 'next/font/google';
 import { SITE_URL } from '../../lib/constants';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
 type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#1D546D',
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -112,9 +119,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         'max-image-preview': 'large',
         'max-snippet': -1,
       },
-    },
-    other: {
-      'theme-color': '#1D546D',
     },
   };
 }
