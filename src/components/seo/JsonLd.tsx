@@ -37,7 +37,7 @@ export function SoftwareApplicationJsonLd({ locale }: { locale: string }) {
     offers: {
       '@type': 'AggregateOffer',
       lowPrice: '0',
-      highPrice: '499',
+      highPrice: '1799',
       priceCurrency: 'UAH',
       offerCount: 3,
     },

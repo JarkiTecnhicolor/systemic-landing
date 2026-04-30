@@ -160,7 +160,7 @@
     "tiers": [
       {
         "name": "Start",
-        "price": "199 UAH",
+        "price": "399 UAH",
         "description": "Dla samodzielnych specjalistów i mikro-salonów",
         "features": [
           "Do 2 użytkowników",
@@ -172,7 +172,7 @@
       },
       {
         "name": "Business",
-        "price": "499 UAH",
+        "price": "799 UAH",
         "description": "Dla rozwijających się firm",
         "features": [
           "Do 5 użytkowników",
@@ -183,7 +183,7 @@
       },
       {
         "name": "Pro",
-        "price": "999 UAH",
+        "price": "1799 UAH",
         "description": "Dla sieci placówek",
         "features": [
           "Do 15 użytkowników",

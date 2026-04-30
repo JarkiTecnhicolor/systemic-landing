@@ -10,7 +10,7 @@ import { SITE_URL } from '../../../lib/constants';
 import type { Metadata } from 'next';
 
 const pricingMeta: Record<string, { title: string; description: string }> = {
-  uk: { title: 'Тарифи — Systemic CRM', description: 'Прозорі тарифи Systemic CRM. Start від 199 грн/міс, Business 499 грн, Pro 999 грн. Всі модулі включено.' },
+  uk: { title: 'Тарифи — Systemic CRM', description: 'Прозорі тарифи Systemic CRM. Start від 399 грн/міс, Business 799 грн, Pro 1799 грн. Всі модулі включено.' },
   en: { title: 'Pricing — Systemic CRM', description: 'Transparent Systemic CRM pricing. Start from €5.99/mo, Business €14.99, Pro €28.99. All modules included.' },
   es: { title: 'Precios — Systemic CRM', description: 'Precios transparentes de Systemic CRM. Start desde €5,99/mes, Business €14,99, Pro €28,99. Todos los módulos incluidos.' },
   fr: { title: 'Tarifs — Systemic CRM', description: 'Tarifs transparents Systemic CRM. Start à partir de 5,99 €/mois, Business 14,99 €, Pro 28,99 €. Tous les modules inclus.' },

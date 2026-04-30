@@ -31,7 +31,7 @@ Systemic is a cloud-based CRM (Customer Relationship Management) system designed
 ## Pricing
 
 - **Starter (Free)**: 1 location, up to 2 staff, calendar, client base, basic finances
-- **Business (499 UAH/mo)**: Up to 5 locations, unlimited staff, full features, Telegram bot, priority support
+- **Business (799 UAH/mo)**: Up to 5 locations, unlimited staff, full features, Telegram bot, priority support
 - **Enterprise (Custom)**: Unlimited locations, API access, custom integrations, dedicated manager, SLA
 
 ## Tech Stack

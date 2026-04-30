@@ -4,7 +4,7 @@ import AnimateOnScroll from '../ui/AnimateOnScroll';
 import { REGISTER_URL } from '../../lib/constants';
 
 const PRICES: Record<string, { prices: string[]; currency: string }> = {
-  ua: { prices: ['199 грн', '499 грн', '999 грн'], currency: 'грн' },
+  ua: { prices: ['399 грн', '799 грн', '1799 грн'], currency: 'грн' },
   eu: { prices: ['€5.99', '€14.99', '€28.99'], currency: 'EUR' },
 };
 
