@@ -14,8 +14,16 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll);
+    // Functional setState avoids triggering a render when the value hasn't
+    // actually crossed the threshold — every scroll tick was re-rendering
+    // <Header> + the (possibly mounted) <MobileMenu> on iOS, which made
+    // touches feel sluggish. passive:true is also critical on iOS — without
+    // it, the event blocks the rendering pipeline.
+    const onScroll = () => {
+      const next = window.scrollY > 20;
+      setScrolled(prev => prev === next ? prev : next);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
@@ -66,7 +74,9 @@ export default function Header() {
 
             <button
               onClick={() => setMenuOpen(true)}
-              className={`md:hidden p-2 ${scrolled ? 'text-text-primary' : 'text-white'}`}
+              aria-label="Open menu"
+              className={`md:hidden p-2 cursor-pointer ${scrolled ? 'text-text-primary' : 'text-white'}`}
+              style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />

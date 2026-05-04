@@ -16,10 +16,26 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: Props) {
   const t = useTranslations('nav');
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      return () => { document.body.style.overflow = ''; };
-    }
+    if (!isOpen) return;
+    // iOS Safari ignores `body { overflow: hidden }` — the page still
+    // rubber-bands behind the modal. The reliable lock is to fix the body
+    // at the current scroll offset and restore it on close.
+    const scrollY = window.scrollY;
+    const prevPosition = document.body.style.position;
+    const prevTop = document.body.style.top;
+    const prevWidth = document.body.style.width;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = '100%';
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.position = prevPosition;
+      document.body.style.top = prevTop;
+      document.body.style.width = prevWidth;
+      document.body.style.overflow = prevOverflow;
+      window.scrollTo(0, scrollY);
+    };
   }, [isOpen]);
 
   if (!isOpen) return null;
@@ -42,7 +58,17 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: Props) {
 
         <nav className="flex flex-col gap-4 mb-8">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} onClick={onClose} className="text-lg text-text-primary hover:text-accent transition-colors">
+            <a
+              key={link.href}
+              href={link.href}
+              // Defer the close so iOS Safari finishes the same-page hash
+              // navigation BEFORE we unmount the <a>. Without the timeout
+              // the element is removed mid-tap and the scroll-to-anchor
+              // never fires on iOS.
+              onClick={() => { setTimeout(onClose, 50); }}
+              className="text-lg text-text-primary hover:text-accent transition-colors cursor-pointer"
+              style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
+            >
               {link.label}
             </a>
           ))}
