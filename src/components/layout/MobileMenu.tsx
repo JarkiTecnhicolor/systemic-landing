@@ -17,24 +17,16 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: Props) {
 
   useEffect(() => {
     if (!isOpen) return;
-    // iOS Safari ignores `body { overflow: hidden }` — the page still
-    // rubber-bands behind the modal. The reliable lock is to fix the body
-    // at the current scroll offset and restore it on close.
-    const scrollY = window.scrollY;
-    const prevPosition = document.body.style.position;
-    const prevTop = document.body.style.top;
-    const prevWidth = document.body.style.width;
+    // Lightweight body lock: just overflow:hidden + overscroll-behavior:contain.
+    // The previous position:fixed + scrollY-restore approach fought iOS Safari's
+    // smooth-scroll-to-anchor when a nav link closed the menu, causing 2-5s freezes.
     const prevOverflow = document.body.style.overflow;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.width = '100%';
+    const prevOverscroll = document.body.style.overscrollBehavior;
     document.body.style.overflow = 'hidden';
+    document.body.style.overscrollBehavior = 'contain';
     return () => {
-      document.body.style.position = prevPosition;
-      document.body.style.top = prevTop;
-      document.body.style.width = prevWidth;
       document.body.style.overflow = prevOverflow;
-      window.scrollTo(0, scrollY);
+      document.body.style.overscrollBehavior = prevOverscroll;
     };
   }, [isOpen]);
 
@@ -42,7 +34,11 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: Props) {
 
   return (
     <div className="fixed inset-0 z-50 md:hidden">
-      <div className="fixed inset-0 bg-black/50" onClick={onClose} />
+      <div
+        className="fixed inset-0 bg-black/50"
+        onClick={onClose}
+        style={{ touchAction: 'none' }}
+      />
       <div className="fixed right-0 top-0 bottom-0 w-72 bg-white shadow-xl p-6 flex flex-col">
         <div className="flex justify-between items-center mb-8">
           <div className="flex items-center gap-2">
@@ -61,11 +57,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: Props) {
             <a
               key={link.href}
               href={link.href}
-              // Defer the close so iOS Safari finishes the same-page hash
-              // navigation BEFORE we unmount the <a>. Without the timeout
-              // the element is removed mid-tap and the scroll-to-anchor
-              // never fires on iOS.
-              onClick={() => { setTimeout(onClose, 50); }}
+              onClick={onClose}
               className="text-lg text-text-primary hover:text-accent transition-colors cursor-pointer"
               style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
             >

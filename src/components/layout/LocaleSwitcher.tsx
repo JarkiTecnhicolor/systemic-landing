@@ -21,12 +21,13 @@ export default function LocaleSwitcher({ scrolled = false }: { scrolled?: boolea
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!open) return;
     const handleClick = (e: Event) => {
       if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
     };
     document.addEventListener('pointerdown', handleClick);
     return () => document.removeEventListener('pointerdown', handleClick);
-  }, []);
+  }, [open]);
 
   const current = locales.find(l => l.code === locale) ?? locales[0];
 
