@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import Button from '../ui/Button';
 import LocaleSwitcher from './LocaleSwitcher';
@@ -15,37 +14,40 @@ type Props = {
 export default function MobileMenu({ isOpen, onClose, navLinks }: Props) {
   const t = useTranslations('nav');
 
-  useEffect(() => {
-    if (!isOpen) return;
-    // Lightweight body lock: just overflow:hidden + overscroll-behavior:contain.
-    // The previous position:fixed + scrollY-restore approach fought iOS Safari's
-    // smooth-scroll-to-anchor when a nav link closed the menu, causing 2-5s freezes.
-    const prevOverflow = document.body.style.overflow;
-    const prevOverscroll = document.body.style.overscrollBehavior;
-    document.body.style.overflow = 'hidden';
-    document.body.style.overscrollBehavior = 'contain';
-    return () => {
-      document.body.style.overflow = prevOverflow;
-      document.body.style.overscrollBehavior = prevOverscroll;
-    };
-  }, [isOpen]);
-
-  if (!isOpen) return null;
+  // The whole overlay stays mounted (backdrop pointer-events / panel offscreen
+  // when closed). Mounting the panel on every tap creates the entire subtree
+  // from scratch — on iOS Safari that's a ~1s reflow/paint, especially with a
+  // wide shadow on the fixed panel.
+  //
+  // Scroll-lock is handled entirely by the backdrop's `touch-action: none` +
+  // the panel itself covering the rest of the viewport. No body style mutation,
+  // so nothing fights iOS smooth-scroll-to-anchor on close.
 
   return (
-    <div className="fixed inset-0 z-50 md:hidden">
+    <div
+      className={`fixed inset-0 z-50 md:hidden ${isOpen ? '' : 'pointer-events-none'}`}
+      aria-hidden={!isOpen}
+    >
       <div
-        className="fixed inset-0 bg-black/50"
+        className={`fixed inset-0 bg-black/50 transition-opacity duration-200 ${isOpen ? 'opacity-100' : 'opacity-0'}`}
         onClick={onClose}
         style={{ touchAction: 'none' }}
       />
-      <div className="fixed right-0 top-0 bottom-0 w-72 bg-white shadow-xl p-6 flex flex-col">
+      <div
+        className={`fixed right-0 top-0 bottom-0 w-72 bg-white shadow-lg p-6 flex flex-col transition-transform duration-200 ease-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        style={{ willChange: 'transform' }}
+      >
         <div className="flex justify-between items-center mb-8">
           <div className="flex items-center gap-2">
             <img src="/images/logo.png" alt="Systemic" className="h-7 w-7 rounded-lg" />
             <img src="/images/logo-text.png" alt="Systemic" className="h-4 brightness-0" />
           </div>
-          <button onClick={onClose} className="p-2 text-text-secondary cursor-pointer">
+          <button
+            onClick={onClose}
+            aria-label="Close menu"
+            className="p-2 text-text-secondary cursor-pointer"
+            style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
+          >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
